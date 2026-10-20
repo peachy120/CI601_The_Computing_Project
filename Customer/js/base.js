@@ -4,7 +4,7 @@
 const bodyColour = document.querySelector("body");
 
 const lightModeButton = document.querySelector(".colour_button.light_mode");
-const darkModeButton = document.querySelector(".colour_button.dark_mode.display_inline");
+const darkModeButton = document.querySelector(".colour_button.dark_mode.display_left");
 
 lightModeButton.addEventListener("click", function(e) {
 
@@ -12,8 +12,8 @@ lightModeButton.addEventListener("click", function(e) {
 
     bodyColour.classList.remove("dark_colour");
 
-    lightModeButton.classList.remove("display_inline");
-    darkModeButton.classList.add("display_inline");
+    lightModeButton.classList.remove("display_left");
+    darkModeButton.classList.add("display_left");
 
 });
 
@@ -23,8 +23,8 @@ darkModeButton.addEventListener("click", function(e) {
 
     bodyColour.classList.add("dark_colour");
 
-    lightModeButton.classList.add("display_inline");
-    darkModeButton.classList.remove("display_inline");
+    lightModeButton.classList.add("display_left");
+    darkModeButton.classList.remove("display_left");
 
 });
 

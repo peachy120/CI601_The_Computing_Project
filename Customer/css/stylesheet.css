@@ -84,12 +84,6 @@ small {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);    
 }
 
-.inline {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .light_mode {
     display: none;
 }
@@ -98,8 +92,9 @@ small {
     display: none;
 }
 
-.display_inline {
-    display: inline;
+.display_left {
+    display: block;
+    margin-left: auto;
 }
 
 .showAtTop {
