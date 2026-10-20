@@ -179,12 +179,12 @@ Mobile first
         display: none;
     }
 
-    .display_inline {
-        display: inline;
-    }
-
     .hide_in_mobile {
         display: none;
+    }
+
+    .display_inline {
+        display: inline;
     }
 
     .display_block_in_mobile {
