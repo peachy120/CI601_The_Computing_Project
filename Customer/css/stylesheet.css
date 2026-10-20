@@ -123,7 +123,13 @@ small {
 }
 
 .login_button {
-    display: none;
+    display: none;    
+    background-color: #F9F8F5;
+    color: #8C74A5;
+    border-radius: 5em;
+    border: 0;
+    font-size: 0.875em;
+    font-weight: bold;
 }
 
 .logout_button {
