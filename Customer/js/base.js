@@ -10,10 +10,10 @@ lightModeButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    bodyColour.classList.add("dark_colour");
+    bodyColour.classList.remove("dark_colour");
 
-    lightModeButton.classList.remove("display_inline");
-    darkModeButton.classList.add("display_inline");
+    lightModeButton.classList.add("display_inline");
+    darkModeButton.classList.remove("display_inline");
 
 });
 
@@ -21,10 +21,10 @@ darkModeButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    bodyColour.classList.remove("dark_colour");
+    bodyColour.classList.add("dark_colour");
 
-    lightModeButton.classList.add("display_inline");
-    darkModeButton.classList.remove("display_inline");
+    lightModeButton.classList.remove("display_inline");
+    darkModeButton.classList.add("display_inline");
 
 });
 
@@ -85,5 +85,5 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
 
     expandSubMenuButton.classList.add("display_inline");
     shrinkSubMenuButton.classList.remove("display_inline");
-    
+
 });
