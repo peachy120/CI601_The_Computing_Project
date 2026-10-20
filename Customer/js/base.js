@@ -91,16 +91,12 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 // Testing Login Logout button
 //---------------------------------------------------------------------------------------
-const accountButton = document.querySelector(".account");
-
 const loginButton = document.querySelector(".menu_button.login_button.display_block_in_mobile");
 const logoutButton = document.querySelector(".menu_button.logout_button");
 
 loginButton.addEventListener("click", function(e) {
 
     e.preventDefault();
-
-    accountButton.classList.add("display_block_in_mobile");
 
     loginButton.classList.remove("display_block_in_mobile");
     logoutButton.classList.add("display_block_in_mobile");
@@ -110,8 +106,6 @@ loginButton.addEventListener("click", function(e) {
 logoutButton.addEventListener("click", function(e) {
 
     e.preventDefault();
-
-    accountButton.classList.remove("display_block_in_mobile");
 
     loginButton.classList.add("display_block_in_mobile");
     logoutButton.classList.remove("display_block_in_mobile");
