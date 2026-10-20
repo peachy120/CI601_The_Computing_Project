@@ -171,8 +171,8 @@ main {
     padding: 0.5em;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     justify-self: center;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .content {
@@ -182,8 +182,8 @@ main {
     padding: 0.5em;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     justify-self: center;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 form {
