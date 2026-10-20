@@ -483,7 +483,9 @@ Pad
 
     .filter {
 
-    }#accountDetailsArea {
+    }
+    
+    #accountDetailsArea {
 
     }
 
@@ -503,11 +505,6 @@ Pad
         grid-template-columns: 3fr 6fr;
         grid-template-areas: 
             "left_column content";
-    }
-
-    .left_column {
-        width: 70%;
-        justify-self: left;
     }
     
 }
