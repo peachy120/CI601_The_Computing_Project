@@ -403,7 +403,7 @@ Pad
         align-items: center;
         width: auto;
         font-size: 0.875em; /*14px*/
-        border-right: 3px solid black;
+        border-right: 3px solid #F9F8F5;
         border-top: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
@@ -436,7 +436,7 @@ Pad
         align-items: center;
         display: flex;
         font-size: 0.875em; /*14px*/
-        border-right: 3px solid black;
+        border-right: 3px solid #F9F8F5;
         border-top: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
