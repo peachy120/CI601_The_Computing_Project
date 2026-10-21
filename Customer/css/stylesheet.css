@@ -348,8 +348,24 @@ Mobile first
         display: none;
     }
 
+    .expand_triangle {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 10px solid #555;
+    }
+
     .shrink {
-        display: none;
+        display: none;        
+    }
+
+    .shrink_triangle {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 10px solid black;
     }
 
     .hide_in_mobile {
