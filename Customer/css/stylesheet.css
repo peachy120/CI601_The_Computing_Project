@@ -344,6 +344,10 @@ Mobile first
         margin-left: auto;
     }
 
+    .menu_button {
+        border: none;
+    }
+
     .expand {
         display: none;
     }
@@ -353,7 +357,8 @@ Mobile first
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-top: 10px solid #B6A6CA;
+        border-top: 10px solid white;
+        
     }
 
     .shrink {
@@ -365,7 +370,7 @@ Mobile first
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-bottom: 10px solid #B6A6CA;
+        border-bottom: 10px solid white;
     }
 
     .hide_in_mobile {
