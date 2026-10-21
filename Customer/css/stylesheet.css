@@ -344,10 +344,6 @@ Mobile first
         margin-left: auto;
     }
 
-    .menu_button {
-        border: none;
-    }
-
     .expand {
         display: none;
     }
