@@ -354,6 +354,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-top: 10px solid #555;
+        background-color: transparent;
     }
 
     .shrink {
@@ -366,6 +367,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-bottom: 10px solid black;
+        background-color: transparent;
     }
 
     .hide_in_mobile {
