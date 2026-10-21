@@ -349,6 +349,11 @@ Mobile first
         background-color: transparent;
     }
 
+    .sub_menu_button {
+        border: none;
+        background-color: transparent;
+    }
+
     .expand {
         display: none;
     }
