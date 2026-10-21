@@ -344,6 +344,11 @@ Mobile first
         margin-left: auto;
     }
 
+    .menu_button {
+        border: none;
+        background-color: transparent;
+    }
+
     .expand {
         display: none;
     }
@@ -353,7 +358,7 @@ Mobile first
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-top: 10px solid white;
+        border-top: 10px solid #F9F8F5;
         
     }
 
@@ -366,7 +371,7 @@ Mobile first
         height: 0;
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
-        border-bottom: 10px solid white;
+        border-bottom: 10px solid #F9F8F5;
     }
 
     .hide_in_mobile {
