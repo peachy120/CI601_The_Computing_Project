@@ -40,10 +40,10 @@ expandMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideMenuInMobile.classList.add("display_inline");
+    hideMenuInMobile.classList.add("display_block");
 
-    expandMenuButton.classList.remove("display_inline");
-    shrinkMenuButton.classList.add("display_inline");
+    expandMenuButton.classList.remove("display_block");
+    shrinkMenuButton.classList.add("display_block");
 
 });
 
@@ -51,10 +51,10 @@ shrinkMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideMenuInMobile.classList.remove("display_inline");
+    hideMenuInMobile.classList.remove("display_block");
     
-    expandMenuButton.classList.add("display_inline");
-    shrinkMenuButton.classList.remove("display_inline");
+    expandMenuButton.classList.add("display_block");
+    shrinkMenuButton.classList.remove("display_block");
 
 });
 
