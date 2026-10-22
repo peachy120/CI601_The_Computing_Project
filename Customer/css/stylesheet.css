@@ -317,10 +317,6 @@ Mobile first
         padding-bottom: 0.5em;
     }
 
-    .menu li:first-child {
-        border-top: none;
-    }
-
     .sub_menu {
         display: flex;
     }
@@ -352,7 +348,6 @@ Mobile first
 
     .inline_in_mobile li {
         margin: 0 auto;
-        border-bottom: 3px solid #F9F8F5;
     }
 
     .expand_shrink_button {
