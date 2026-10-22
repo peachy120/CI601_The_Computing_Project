@@ -521,8 +521,12 @@ Pad
         border-right: none;
     }
 
-    .hide_in_mobile {
-        display: flex;
+    .hide_in_mobile li{        
+        border-top: none;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        padding-top: 0em;
+        padding-bottom: 0em;
     }
 
     .expand {
