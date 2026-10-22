@@ -406,6 +406,7 @@ Mobile first
 
     .display_block_in_mobile {
         display: block;
+        margin: auto;
         justify-content: center;
         align-items: center;
     }
