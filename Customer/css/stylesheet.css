@@ -317,6 +317,10 @@ Mobile first
         padding-bottom: 0.5em;
     }
 
+    .menu li:first-child {
+        border-top: none;
+    }
+
     .sub_menu {
         display: flex;
     }
@@ -394,6 +398,14 @@ Mobile first
 
     .hide_in_mobile {
         display: none;
+
+        .menu li:first-child {            
+            border-top: 3px solid #F9F8F5;
+        }
+
+        .sub_menu li:first-child {            
+            border-top: 3px solid #F9F8F5;
+        }
     }
 
     .display_inline {
