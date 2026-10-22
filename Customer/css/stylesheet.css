@@ -335,7 +335,7 @@ Mobile first
 
     .sub_menu li {
         display: block;
-        width: 95%;
+        width: 200%;
         border-top: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
