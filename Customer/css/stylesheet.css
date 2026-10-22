@@ -93,7 +93,7 @@ small {
 }
 
 .colour_button {
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .light_mode {
@@ -155,7 +155,7 @@ small {
     border: 0;
     font-size: 0.875em;
     font-weight: bold;
-    max-width: 50px;
+    max-width: 80px;
 }
 
 .login_button {
