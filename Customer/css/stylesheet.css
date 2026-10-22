@@ -317,7 +317,7 @@ Mobile first
         padding-bottom: 0.5em;
     }
 
-    .menu li:las-child {
+    .menu li:last-child {
         border-top: none;
     }
 
