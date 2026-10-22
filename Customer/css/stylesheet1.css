@@ -408,6 +408,10 @@ Mobile first
         display: inline;
     }
 
+    .display_block {
+        display: block;
+    }
+
     .display_block_in_mobile {
         display: block;
         margin: auto;
