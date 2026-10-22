@@ -318,11 +318,11 @@ Mobile first
     }
 
     .menu li:first-child {
-        border-bottom: none;
+        border-bottom: 3px solid #F9F8F5;
     }
 
     .menu li:last-child {
-        border-top: 3px solid #F9F8F5;
+        border-top: none;
     }
 
     .sub_menu {
