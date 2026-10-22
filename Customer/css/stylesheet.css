@@ -156,6 +156,7 @@ small {
     font-size: 0.875em;
     font-weight: bold;
     width: 70px;
+    padding: 0.25em;
 }
 
 .login_button {
