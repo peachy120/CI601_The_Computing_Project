@@ -350,6 +350,10 @@ Mobile first
         align-items: center;
     }
 
+    .inline_in_mobile li {
+        margin: auto;
+    }
+
     .expand_shrink_button {
         margin-left: auto;
         margin-bottom: auto;
@@ -515,6 +519,10 @@ Pad
 
     .sub_menu li:last-child {
         border-right: none;
+    }
+
+    .inline_in_mobile li {
+        display: flex;
     }
 
     .hide_in_mobile {
