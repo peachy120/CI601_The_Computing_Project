@@ -61,7 +61,7 @@ shrinkMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 // Control sub_menu expansion and shrinking
 //---------------------------------------------------------------------------------------
-const hideSubMenuInMobile = document.querySelectorAll(".sub_menu_option.hide_in_mobile");
+const hideSubMenuInMobile = document.querySelector(".sub_menu_option.hide_in_mobile");
 
 const expandSubMenuButton = document.querySelector(".expand_shrink_sub_menu_button.expand.display_block");
 const shrinkSubMenuButton = document.querySelector(".expand_shrink_sub_menu_button.shrink");
