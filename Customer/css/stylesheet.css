@@ -335,7 +335,7 @@ Mobile first
 
     .sub_menu li {
         display: block;
-        width: 180px;
+        width: 95%;
         border-top: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
@@ -402,14 +402,6 @@ Mobile first
 
     .display_inline {
         display: inline;
-
-        .menu li:first-child {            
-            border-top: 3px solid #F9F8F5;
-        }
-
-        .sub_menu li:first-child {            
-            border-top: 3px solid #F9F8F5;
-        }
     }
 
     .display_block_in_mobile {
