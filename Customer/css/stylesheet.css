@@ -357,10 +357,10 @@ Mobile first
 
     .expand_shrink_button {
         margin-left: auto;
-        margin-top: auto;
+        margin-bottom: auto;
     }
 
-    .menu_button {
+    .expand_shrink_button {
         border: none;
         background-color: transparent;
     }
