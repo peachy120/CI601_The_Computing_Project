@@ -312,13 +312,13 @@ Mobile first
     .menu li {
         display: block;
         width: 270px;
-        border-top: 3px solid #F9F8F5;
+        border-bottom: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
     .menu li:last-child {
-        border-top: none;
+        border-bottom: none;
     }
 
     .sub_menu {
@@ -336,13 +336,13 @@ Mobile first
     .sub_menu li {
         display: block;
         width: 270px;
-        border-top: 3px solid #F9F8F5;
+        border-bottom: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
     .sub_menu li:last-child {
-        border-top: none;
+        border-bottom: none;
     }
 
     .inline_in_mobile {
@@ -477,7 +477,7 @@ Pad
         width: auto;
         font-size: 0.875em; /*14px*/
         border-right: 3px solid #F9F8F5;
-        border-top: none;
+        border-bottom: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
         padding-top: 0em;
@@ -510,7 +510,7 @@ Pad
         display: flex;
         font-size: 0.875em; /*14px*/
         border-right: 3px solid #F9F8F5;
-        border-top: none;
+        border-bottom: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
         padding-top: 0em;
