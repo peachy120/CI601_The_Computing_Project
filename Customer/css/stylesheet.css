@@ -312,7 +312,8 @@ Mobile first
     .menu li {
         display: block;
         width: 270px;
-        border-top: 0.5em;
+        border-bottom: 3px solid #F9F8F5;
+        padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
