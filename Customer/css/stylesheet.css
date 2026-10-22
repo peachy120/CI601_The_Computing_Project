@@ -350,10 +350,6 @@ Mobile first
         align-items: center;
     }
 
-    .inline_in_mobile li {
-        margin: auto;
-    }
-
     .expand_shrink_button {
         margin-left: auto;
         margin-bottom: auto;
