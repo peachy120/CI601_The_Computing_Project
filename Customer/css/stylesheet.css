@@ -488,8 +488,8 @@ Pad
         border-right: none;
     }
 
-    .inline_in_mobile li {
-        margin: auto;
+    .menu li:first-child {
+        background-color: aqua;
     }
 
     .display_block_in_mobile {
