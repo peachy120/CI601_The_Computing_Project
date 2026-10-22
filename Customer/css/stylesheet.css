@@ -355,8 +355,9 @@ Mobile first
         padding-right: 1em;
     }
 
-    .inline_in_mobile button {
+    .expand_shrink_button {
         margin-left: auto;
+        margin-top: auto;
     }
 
     .menu_button {

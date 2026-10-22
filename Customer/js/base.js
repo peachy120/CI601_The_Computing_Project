@@ -33,8 +33,8 @@ darkModeButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 const hideMenuInMobile = document.querySelector(".menu_option.hide_in_mobile");
 
-const expandMenuButton = document.querySelector(".menu_button.expand.display_inline");
-const shrinkMenuButton = document.querySelector(".menu_button.shrink");
+const expandMenuButton = document.querySelector(".expand_shrink_button.expand.display_inline");
+const shrinkMenuButton = document.querySelector(".expand_shrink_button.shrink");
 
 expandMenuButton.addEventListener("click", function(e) {
 
@@ -63,8 +63,8 @@ shrinkMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 const hideSubMenuInMobile = document.querySelector(".sub_menu_option.hide_in_mobile");
 
-const expandSubMenuButton = document.querySelector(".sub_menu_button.expand.display_inline");
-const shrinkSubMenuButton = document.querySelector(".sub_menu_button.shrink");
+const expandSubMenuButton = document.querySelector(".expand_shrink_button.expand.display_inline");
+const shrinkSubMenuButton = document.querySelector(".expand_shrink_button.shrink");
 
 expandSubMenuButton.addEventListener("click", function(e) {
 
