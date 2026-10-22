@@ -352,6 +352,7 @@ Mobile first
 
     .inline_in_mobile li {
         margin: 0 auto;
+        padding-right: 1em;
     }
 
     .inline_in_mobile button {
