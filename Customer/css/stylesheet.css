@@ -378,6 +378,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-top: 10px solid #F9F8F5;
+        margin: auto;
         
     }
 
@@ -391,6 +392,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-bottom: 10px solid #F9F8F5;
+        margin: auto;
     }
 
     .hide_in_mobile {
