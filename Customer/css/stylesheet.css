@@ -398,6 +398,10 @@ Mobile first
 
     .hide_in_mobile {
         display: none;
+    }
+
+    .display_inline {
+        display: inline;
 
         .menu li:first-child {            
             border-top: 3px solid #F9F8F5;
@@ -406,10 +410,6 @@ Mobile first
         .sub_menu li:first-child {            
             border-top: 3px solid #F9F8F5;
         }
-    }
-
-    .display_inline {
-        display: inline;
     }
 
     .display_block_in_mobile {
