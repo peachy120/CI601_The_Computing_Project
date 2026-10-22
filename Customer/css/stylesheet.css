@@ -406,6 +406,8 @@ Mobile first
 
     .display_block_in_mobile {
         display: block;
+        justify-content: center;
+        align-items: center;
     }
 
     form label {
