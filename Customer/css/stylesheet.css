@@ -317,7 +317,7 @@ Mobile first
         padding-bottom: 0.5em;
     }
 
-    .menu li:first-child {
+    .menu li:last-child {
         border-top: none;
     }
 
@@ -341,7 +341,7 @@ Mobile first
         padding-bottom: 0.5em;
     }
 
-    .sub_menu li:first-child {
+    .sub_menu li:last-child {
         border-top: none;
     }
 
