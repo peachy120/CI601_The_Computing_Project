@@ -159,13 +159,14 @@ small {
     padding: 0.25em;
 }
 
-.login_button {
-    display: none;    
-}
-
-.logout_button {
+.menu_option.hide_in_mobile.login_logout_button.login_button {
     display: none;
 }
+
+.menu_option.hide_in_mobile.login_logout_button.logout_button {
+    display: none;
+}
+
 
 .sub_menu {
     background-color: #8C74A5;
@@ -312,13 +313,13 @@ Mobile first
     .menu li {
         display: block;
         width: 270px;
-        border-bottom: 3px solid #F9F8F5;
+        border-top: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
-    .menu li:last-child {
-        border-bottom: none;
+    .menu li:first-child {
+        border-top: none;
     }
 
     .sub_menu {
@@ -336,13 +337,13 @@ Mobile first
     .sub_menu li {
         display: block;
         width: 270px;
-        border-bottom: 3px solid #F9F8F5;
+        border-top: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
-    .sub_menu li:last-child {
-        border-bottom: none;
+    .sub_menu li:first-child {
+        border-top: none;
     }
 
     .inline_in_mobile {
@@ -400,19 +401,42 @@ Mobile first
         display: none;
     }
 
+    .menu_option.hide_in_mobile.display_block {
+        display: block;
+    }
+
+    .expand_shrink_menu_button.expand.display_block {
+        display: block;
+    }
+
+    .expand_shrink_menu_button.shrink.display_block {
+        display: block;
+    }
+
     .sub_menu_option.hide_in_mobile {
         display: none;
     }
 
-    .display_inline {
-        display: inline;
-    }
-
-    .display_block {
+    .sub_menu_option.hide_in_mobile.display_block {
         display: block;
     }
 
-    .display_block_in_mobile {
+    .expand_shrink_sub_menu_button.expand.display_block {
+        display: block;
+    }
+
+    .expand_shrink_sub_menu_button.shrink.display_block {
+        display: block;
+    }
+
+    .menu_option.hide_in_mobile.login_logout_button.login_button.display_block {
+        display: block;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu_option.hide_in_mobile.login_logout_button.logout_button.display_block {
         display: block;
         margin: auto;
         justify-content: center;
@@ -494,10 +518,6 @@ Pad
 
     .menu li:last-child {
         border-right: none;
-    }
-
-    .display_block_in_mobile {
-        display: inline;
     }
 
     .sub_menu {

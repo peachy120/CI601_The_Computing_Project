@@ -40,7 +40,11 @@ expandMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideMenuInMobile.classList.add("display_block");
+    for (const menu_option of hideMenuInMobile) {
+        menu_option.classList.add("display_block");
+    }
+
+    logoutButton.classList.remove("display_block");
 
     expandMenuButton.classList.remove("display_block");
     shrinkMenuButton.classList.add("display_block");
@@ -51,7 +55,9 @@ shrinkMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideMenuInMobile.classList.remove("display_block");
+    for (const menu_option of hideMenuInMobile) {
+        menu_option.classList.remove("display_block");
+    }
     
     expandMenuButton.classList.add("display_block");
     shrinkMenuButton.classList.remove("display_block");
@@ -61,7 +67,7 @@ shrinkMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 // Control sub_menu expansion and shrinking
 //---------------------------------------------------------------------------------------
-const hideSubMenuInMobile = document.querySelector(".sub_menu_option.hide_in_mobile");
+const hideSubMenuInMobile = document.getElementsByClassName("sub_menu_option hide_in_mobile");
 
 const expandSubMenuButton = document.querySelector(".expand_shrink_sub_menu_button.expand.display_block");
 const shrinkSubMenuButton = document.querySelector(".expand_shrink_sub_menu_button.shrink");
@@ -70,7 +76,9 @@ expandSubMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideSubMenuInMobile.classList.add("display_block");
+    for (const sub_menu_option of hideSubMenuInMobile) {
+        sub_menu_option.classList.add("display_block");
+    }    
 
     expandSubMenuButton.classList.remove("display_block");
     shrinkSubMenuButton.classList.add("display_block");
@@ -81,7 +89,9 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    hideSubMenuInMobile.classList.remove("display_block");
+    for (const sub_menu_option of hideSubMenuInMobile) {
+        sub_menu_option.classList.remove("display_block");
+    }
 
     expandSubMenuButton.classList.add("display_block");
     shrinkSubMenuButton.classList.remove("display_block");
@@ -91,15 +101,15 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 // Testing Login Logout button
 //---------------------------------------------------------------------------------------
-const loginButton = document.querySelector(".login_logout_button.login_button.display_block_in_mobile");
+const loginButton = document.querySelector(".login_logout_button.login_button");
 const logoutButton = document.querySelector(".login_logout_button.logout_button");
 
 loginButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    loginButton.classList.remove("display_block_in_mobile");
-    logoutButton.classList.add("display_block_in_mobile");
+    loginButton.classList.remove("display_block");
+    logoutButton.classList.add("display_block");
 
 })
 
@@ -107,7 +117,7 @@ logoutButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
-    loginButton.classList.add("display_block_in_mobile");
-    logoutButton.classList.remove("display_block_in_mobile");
+    loginButton.classList.add("display_block");
+    logoutButton.classList.remove("display_block");
 
 })
