@@ -488,7 +488,7 @@ Pad
         border-right: none;
     }
 
-    .menu li:first-child {
+    .menu li:last-child {
         background-color: aqua;
     }
 
