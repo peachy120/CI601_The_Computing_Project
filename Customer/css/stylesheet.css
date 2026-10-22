@@ -311,14 +311,18 @@ Mobile first
 
     .menu li {
         display: block;
-        width: 180px;
-        border-top: 3px solid #F9F8F5;
+        width: 270px;
+        border-bottom: 3px solid #F9F8F5;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
     }
 
     .menu li:first-child {
-        border-top: none;
+        border-bottom: none;
+    }
+
+    .menu li:last-child {
+        border-top: 3px solid #F9F8F5;
     }
 
     .sub_menu {
