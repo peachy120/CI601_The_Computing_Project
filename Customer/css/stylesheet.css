@@ -488,6 +488,10 @@ Pad
         border-right: none;
     }
 
+    .inline_in_mobile li {
+        margin: auto;
+    }
+
     .display_block_in_mobile {
         display: inline;
     }
