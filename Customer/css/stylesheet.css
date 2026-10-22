@@ -488,10 +488,6 @@ Pad
         border-right: none;
     }
 
-    .menu_option li:last-child {
-        background-color: aqua;
-    }
-
     .display_block_in_mobile {
         display: inline;
     }
