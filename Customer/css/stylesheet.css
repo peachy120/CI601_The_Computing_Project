@@ -144,8 +144,7 @@ small {
     color: #F9F8F5;
 }
 
-.login_button {
-    display: none;    
+.login_logout_button {    
     background-color: #F9F8F5;
     color: #8C74A5;
     border-radius: 5em;
@@ -154,14 +153,12 @@ small {
     font-weight: bold;
 }
 
+.login_button {
+    display: none;    
+}
+
 .logout_button {
     display: none;
-    background-color: #F9F8F5;
-    color: #8C74A5;
-    border-radius: 5em;
-    border: 0;
-    font-size: 0.875em;
-    font-weight: bold;
 }
 
 .sub_menu {
@@ -316,26 +313,6 @@ Mobile first
 
     .menu li:first-child {
         border-top: none;
-    }
-
-    .login_button {
-        display: none;    
-        background-color: #F9F8F5;
-        color: #8C74A5;
-        border-radius: 5em;
-        border: 0;
-        font-size: 0.875em;
-        font-weight: bold;
-    }
-
-    .logout_button {
-        display: none;
-        background-color: #F9F8F5;
-        color: #8C74A5;
-        border-radius: 5em;
-        border: 0;
-        font-size: 0.875em;
-        font-weight: bold;
     }
 
     .sub_menu {

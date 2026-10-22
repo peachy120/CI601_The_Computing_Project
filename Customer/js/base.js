@@ -91,8 +91,8 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
 //---------------------------------------------------------------------------------------
 // Testing Login Logout button
 //---------------------------------------------------------------------------------------
-const loginButton = document.querySelector(".menu_button.login_button.display_block_in_mobile");
-const logoutButton = document.querySelector(".menu_button.logout_button");
+const loginButton = document.querySelector(".login_logout_button.login_button.display_block_in_mobile");
+const logoutButton = document.querySelector(".login_logout_button.logout_button");
 
 loginButton.addEventListener("click", function(e) {
 
