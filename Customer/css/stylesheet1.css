@@ -396,7 +396,11 @@ Mobile first
         margin: 0 auto;
     }
 
-    .hide_in_mobile {
+    .menu_option.hide_in_mobile {
+        display: none;
+    }
+
+    .sub_menu_option.hide_in_mobile {
         display: none;
     }
 
