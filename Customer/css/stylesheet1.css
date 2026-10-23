@@ -2,8 +2,10 @@
 Base Style for all screen
 ---------------------------------------------------------------------------------------*/
 body {
+    margin: 5px auto;
     background-color: #F9F8F5;
     color: #3D2F28;
+    width: 97%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -159,15 +161,6 @@ small {
     padding: 0.25em;
 }
 
-.menu_option.hide_in_mobile.login_logout_button.login_button {
-    display: none;
-}
-
-.menu_option.hide_in_mobile.login_logout_button.logout_button {
-    display: none;
-}
-
-
 .sub_menu {
     background-color: #8C74A5;
     color: #F9F8F5;
@@ -296,7 +289,7 @@ a[href^="#top"] {
 Mobile first
 ---------------------------------------------------------------------------------------*/
 
-@media (max-width: 48em) {
+@media (max-width: 880px) {
 
     .menu {
         display: flex;
@@ -429,20 +422,6 @@ Mobile first
         display: block;
     }
 
-    .menu_option.hide_in_mobile.login_logout_button.login_button.display_block {
-        display: block;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menu_option.hide_in_mobile.login_logout_button.logout_button.display_block {
-        display: block;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
     form label {
 
     }
@@ -489,7 +468,7 @@ Mobile first
 Pad
 ---------------------------------------------------------------------------------------*/
 
-@media (min-width: 48em) {
+@media (min-width: 880px) {
 
     .menu {
         display: flex;
@@ -501,6 +480,8 @@ Pad
         display: flex;
         margin: 0;
         padding: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
     .menu li {
@@ -512,13 +493,11 @@ Pad
         border-bottom: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        padding-top: 0em;
-        padding-bottom: 0em;
     }
 
     .menu li:last-child {
         border-right: none;
-    }
+    }    
 
     .sub_menu {
         display: flex;
@@ -528,8 +507,10 @@ Pad
 
     .sub_menu ul {
         display: flex;
-        margin: 0;
         padding: 0;
+        margin: 0;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
     }
 
     .sub_menu li {
@@ -541,8 +522,6 @@ Pad
         border-bottom: none;
         padding-left: 0.5em;
         padding-right: 0.5em;
-        padding-top: 0em;
-        padding-bottom: 0em;
     }
 
     .sub_menu li:last-child {

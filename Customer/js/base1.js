@@ -44,8 +44,6 @@ expandMenuButton.addEventListener("click", function(e) {
         menu_option.classList.add("display_block");
     }
 
-    logoutButton.classList.remove("display_block");
-
     expandMenuButton.classList.remove("display_block");
     shrinkMenuButton.classList.add("display_block");
 
@@ -97,27 +95,3 @@ shrinkSubMenuButton.addEventListener("click", function(e) {
     shrinkSubMenuButton.classList.remove("display_block");
 
 });
-
-//---------------------------------------------------------------------------------------
-// Testing Login Logout button
-//---------------------------------------------------------------------------------------
-const loginButton = document.querySelector(".login_logout_button.login_button");
-const logoutButton = document.querySelector(".login_logout_button.logout_button");
-
-loginButton.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    loginButton.classList.remove("display_block");
-    logoutButton.classList.add("display_block");
-
-})
-
-logoutButton.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    loginButton.classList.add("display_block");
-    logoutButton.classList.remove("display_block");
-
-})
