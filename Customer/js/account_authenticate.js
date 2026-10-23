@@ -4,7 +4,7 @@ fetch("../Customer/php/account_sessionStatus.php", {
 
     .then(response => response.json())
     .then(data => {
-        const account = document.querySelector(".account");
+        const account = document.querySelector(".menu_option.hide_in_mobile.account");
 
         const loginLogoutButton = document.querySelector(".login_logout_button");
 

@@ -150,11 +150,11 @@ small {
     color: #F9F8F5;
 }
 
-.account {
+.menu_option.hide_in_mobile.account {
     display: none;
 }
 
-.account.display {
+.menu_option.hide_in_mobile.account.display {
     display: block;
 }
 
@@ -208,7 +208,7 @@ main {
 }
 
 .left_column {
-    width: 96%;
+    width: 100%;
     background-color: #D4CADC;
     border-radius: 2px;
     padding: 0.5em;
@@ -219,7 +219,7 @@ main {
 }
 
 .content {
-    width: 96%;
+    width: 100%;
     background-color: pink;
     border-radius: 2px;
     padding: 0.5em;
@@ -278,6 +278,75 @@ footer {
     align-items: center;
 }
 
+.footer_content {
+    width: 100%;
+}
+
+.footer_content h3 {
+    margin: 12px;
+}
+
+.footer_content h4 {
+    margin: 8px;
+    padding-left: 4px;
+}
+
+.footer_content h5 {
+    margin: 6px;
+    padding-left: 2px;
+}
+
+.brand_info {
+    text-align: left;
+    width: 100%;
+}
+
+.find_out_more {
+    text-align: left;
+    width: 100%;
+}
+
+.find_out_more ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 6px;
+}
+
+.find_out_more a:link {
+    color: #8C74A5;
+}
+
+.contact_us {
+    text-align: left;
+    width: 100%;
+}
+
+.contact_us ul {
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.contact_us a:link {
+    color: #8C74A5;
+}
+
+.legal {
+    text-align: left;
+    width: 100%;
+}
+
+.legal ul{
+    list-style: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.legal a:link {
+    color: #8C74A5;
+}
+
 a[href^="#top"] {
     color: #8C74A5;
     margin: 0 auto;
@@ -294,6 +363,22 @@ a[href^="#top"] {
 
 .content {
     grid-area: content;
+}
+
+.brand_info {
+    grid-area: brand_info;
+}
+
+.find_out_more {
+    grid-area: find_out_more;
+}
+
+.contact_us {
+    grid-area: contact_us;
+}
+
+.legal {
+    grid-area: legal;
 }
 
 /*---------------------------------------------------------------------------------------
@@ -433,6 +518,21 @@ Mobile first
         display: block;
     }
 
+    .content_container2 {
+        display: grid;
+        grid-template-areas: 
+            "left_column"
+            "content";
+    }
+
+    .left_column {
+        width: 96%;
+    }
+
+    .content {
+        width: 96%;
+    }
+
     form label {
 
     }
@@ -460,11 +560,28 @@ Mobile first
 
     }
 
-    .content_container2 {
+    .footer_content {
         display: grid;
         grid-template-areas: 
-            "left_column"
-            "content";
+            "brand_info"
+            "find_out_more"
+            "contact_us"
+            "legal";
+    }
+
+    .brand_info {        
+        border-bottom: 3px solid #F9F8F5;
+    }
+
+    .find_out_more {    
+        border-bottom: 3px solid #F9F8F5;
+    }
+
+    .contact_us {      
+        border-bottom: 3px solid #F9F8F5;
+    }
+
+    .legal {
     }
 
 }
@@ -479,7 +596,7 @@ Mobile first
 Pad
 ---------------------------------------------------------------------------------------*/
 
-@media (min-width: 880px) {
+@media (min-width: 881px) {
 
     .menu {
         display: flex;
@@ -499,7 +616,7 @@ Pad
         display: flex;
         align-items: center;
         width: auto;
-        font-size: 0.875em; /*14px*/
+        font-size: 13.9px;
         border-right: 3px solid #F9F8F5;
         border-bottom: none;
         padding-left: 0.5em;
@@ -532,7 +649,7 @@ Pad
         width: auto;
         align-items: center;
         display: flex;
-        font-size: 0.875em; /*14px*/
+        font-size: 13px;
         border-right: 3px solid #F9F8F5;
         border-bottom: none;
         padding-left: 0.5em;
@@ -557,6 +674,23 @@ Pad
 
     .shrink {
         display: none;
+    }
+
+    .content_container2 {
+        display: grid;
+        grid-template-columns: 4fr 9fr;
+        grid-template-areas: 
+            "left_column content";
+    }
+
+    .left_column {
+        width: 90%;
+        justify-self: stretch;
+    }
+
+    .content {
+        width: 90%;
+        justify-self: stretch;
     }
 
     form label {
@@ -602,10 +736,34 @@ Pad
 
     }
 
-    .content_container2 {
-        grid-template-columns: 3fr 6fr;
+    .footer_content {
+        display: grid;
+        grid-template-columns: 6fr 3fr 3fr 3fr;
         grid-template-areas: 
-            "left_column content";
+            "brand_info find_out_more contact_us legal";
+    }
+
+    .brand_info {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-right: 3px solid #F9F8F5;    
+    }
+
+    .find_out_more {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-right: 3px solid #F9F8F5;
+    }
+
+    .contact_us {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-right: 3px solid #F9F8F5;
+    }
+
+    .legal {
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     
 }
