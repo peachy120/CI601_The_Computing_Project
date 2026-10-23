@@ -328,6 +328,7 @@ Mobile first
 
     .sub_menu {
         display: flex;
+        padding-right: 0.5em;
     }
 
     .sub_menu ul {
@@ -384,8 +385,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-top: 10px solid #F9F8F5;
-        margin: 0 auto;
-        
+        margin: 0 auto;        
     }
 
     .shrink {
@@ -398,7 +398,7 @@ Mobile first
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
         border-bottom: 10px solid #F9F8F5;
-        margin: 0 auto;
+        margin-top: auto;
     }
 
     .menu_option.hide_in_mobile {
