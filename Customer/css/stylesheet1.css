@@ -150,6 +150,14 @@ small {
     color: #F9F8F5;
 }
 
+.account {
+    display: none;
+}
+
+.account.display {
+    display: block;
+}
+
 .login_logout_button {    
     background-color: #F9F8F5;
     color: #8C74A5;
@@ -159,6 +167,9 @@ small {
     font-weight: bold;
     width: 70px;
     padding: 0.25em;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .sub_menu {
@@ -497,7 +508,11 @@ Pad
 
     .menu li:last-child {
         border-right: none;
-    }    
+    }
+    
+    .login_logout_button {
+        margin-left: 0.5em;
+    }
 
     .sub_menu {
         display: flex;
