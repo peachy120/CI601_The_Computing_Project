@@ -282,16 +282,17 @@ footer {
     width: 100%;
 }
 
-.footer_content h3 {
+.footer_content h2 {
     margin: 12px;
 }
 
-.footer_content h4 {
+.footer_content h3 {
     margin: 8px;
     padding-left: 4px;
+    padding-bottom: 4px;
 }
 
-.footer_content h5 {
+.footer_content h4 {
     margin: 6px;
     padding-left: 2px;
 }
@@ -308,8 +309,8 @@ footer {
 
 .find_out_more ul {
     list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
     margin: 6px;
 }
 
@@ -324,8 +325,8 @@ footer {
 
 .contact_us ul {
     list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .contact_us a:link {
@@ -339,8 +340,8 @@ footer {
 
 .legal ul{
     list-style: none;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 15px;
+    padding-right: 5px;
 }
 
 .legal a:link {
@@ -616,7 +617,7 @@ Pad
         display: flex;
         align-items: center;
         width: auto;
-        font-size: 13.9px;
+        font-size: 13.5px;
         border-right: 3px solid #F9F8F5;
         border-bottom: none;
         padding-left: 0.5em;
@@ -649,7 +650,7 @@ Pad
         width: auto;
         align-items: center;
         display: flex;
-        font-size: 13px;
+        font-size: 13.5px;
         border-right: 3px solid #F9F8F5;
         border-bottom: none;
         padding-left: 0.5em;
@@ -677,20 +678,20 @@ Pad
     }
 
     .content_container2 {
+        margin: 0 auto;
         display: grid;
+        column-gap: 25px;
         grid-template-columns: 4fr 9fr;
         grid-template-areas: 
             "left_column content";
     }
 
     .left_column {
-        width: 90%;
-        justify-self: stretch;
+        width: 100%;
     }
 
     .content {
-        width: 90%;
-        justify-self: stretch;
+        width: 100%;
     }
 
     form label {
@@ -738,32 +739,27 @@ Pad
 
     .footer_content {
         display: grid;
-        grid-template-columns: 6fr 3fr 3fr 3fr;
+        grid-template-columns: 3fr 3fr 3fr;
         grid-template-areas: 
-            "brand_info find_out_more contact_us legal";
+            "brand_info brand_info brand_info"
+            "find_out_more contact_us legal";
     }
 
     .brand_info {
         margin-top: 1em;
         margin-bottom: 1em;
-        border-right: 3px solid #F9F8F5;    
+        border-bottom: 3px solid #F9F8F5;    
     }
 
     .find_out_more {
-        margin-top: 1em;
-        margin-bottom: 1em;
         border-right: 3px solid #F9F8F5;
     }
 
     .contact_us {
-        margin-top: 1em;
-        margin-bottom: 1em;
         border-right: 3px solid #F9F8F5;
     }
 
     .legal {
-        margin-top: 1em;
-        margin-bottom: 1em;
     }
     
 }
