@@ -9,6 +9,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+/*---------- font / text  ----------*/
 h1 {
     font-size: 2.25em; /* 36px */
     line-height: 1;
@@ -47,11 +48,11 @@ small {
     font-size: 0.75em; /* 15px */
 }
 
+/*---------- Dark Colour----------*/
 .dark_colour {
     
     body {
         background-color: beige;
-        color: white;
     }
 
     .banner {
@@ -76,6 +77,7 @@ small {
 
 }
 
+/*---------- banner ----------*/
 .banner {
     background-color: #D5CFE1;
     color: #8C74A5;
@@ -94,10 +96,12 @@ small {
     margin: 12px;
 }
 
+/*---------- Switching Light and Dark mode ----------*/
 .colour_button {
     width: 160px;
 }
 
+/*---------- light_mode ----------*/
 .light_mode {
     display: none;
     background-color: #F9F8F5;
@@ -109,6 +113,7 @@ small {
     padding: 0.25em;
 }
 
+/*---------- dark_mode ----------*/
 .dark_mode {
     display: none;
     background-color: #8C74A5;
@@ -120,16 +125,19 @@ small {
     padding: 0.25em;
 }
 
+/*---------- Displaying colour switching button on the left ----------*/
 .display_left {
     display: block;
     margin-left: auto;
 }
 
+/*---------- Show menu and sub_menu at the top if scroll down ----------*/
 .showAtTop {
     position: sticky;
     top: 0;
 }
 
+/*---------- menu ----------*/
 .menu {
     background-color: #B6A6CA;
     color: #F9F8F5;
@@ -146,7 +154,24 @@ small {
     list-style: none;
 }
 
+/*-----Unvisited Link-----*/
 .menu a:link {
+    color: #F9F8F5;
+    text-decoration: none;
+}
+
+/*-----Visited Link-----*/
+.menu a:visited {
+    color: #F9F8F5;
+}
+
+/*-----When mouse overs it-----*/
+.menu a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+.menu a:active {
     color: #F9F8F5;
 }
 
@@ -158,6 +183,7 @@ small {
     display: block;
 }
 
+/*---------- Login & Logout Button ----------*/
 .login_logout_button {    
     background-color: #F9F8F5;
     color: #8C74A5;
@@ -172,6 +198,7 @@ small {
     margin: auto;
 }
 
+/*---------- sub_menu ----------*/
 .sub_menu {
     background-color: #8C74A5;
     color: #F9F8F5;
@@ -189,24 +216,45 @@ small {
     list-style: none;
 }
 
+/*-----Unvisited Link-----*/
 .sub_menu a:link {
+    color: #F9F8F5;
+    text-decoration: none;
+}
+
+/*-----Visited Link-----*/
+.sub_menu a:visited {
     color: #F9F8F5;
 }
 
+/*-----When mouse overs it-----*/
+.sub_menu a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+.sub_menu a:active {
+    color: #F9F8F5;
+}
+
+/*---------- main ----------*/
 main {
     width: 90%;
     padding: 0.5em;
     justify-self: center;
 }
 
+/*---------- content_container ----------*/
 .content_container {
     width: 100%;
 }
 
+/*---------- content_container2 ----------*/
 .content_container2 {
     width: 100%;
 }
 
+/*---------- left_column for content_container2 ----------*/
 .left_column {
     width: 100%;
     background-color: #D4CADC;
@@ -218,6 +266,7 @@ main {
     margin-bottom: 1em;
 }
 
+/*---------- content for content_container & content_container2 ----------*/
 .content {
     width: 100%;
     background-color: pink;
@@ -229,6 +278,8 @@ main {
     margin-bottom: 1em;
 }
 
+
+/*---------- form ----------*/
 form {
     background-color: #EFECE6;
     border-radius: 5px;
@@ -240,6 +291,7 @@ form {
     justify-self: center;
 }
 
+/*---------- accountDetailsArea for account.html ----------*/
 #accountDetailsArea {
     background-color: #EFECE6;
 	border-radius: 8px;
@@ -268,6 +320,17 @@ form {
     width: 100px;
 }
 
+/*---------- Navigation Button back to top ----------*/
+a[href^="#top"] {
+    color: #8C74A5;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------- footer ----------*/
 footer {
     background-color: #D4CADC;
     color: #8C74A5;
@@ -297,11 +360,13 @@ footer {
     padding-left: 2px;
 }
 
+/*---------- brand_info for footer_content ----------*/
 .brand_info {
     text-align: left;
     width: 100%;
 }
 
+/*---------- find_out_more for footer_content ----------*/
 .find_out_more {
     text-align: left;
     width: 100%;
@@ -314,10 +379,28 @@ footer {
     margin: 6px;
 }
 
+/*-----Unvisited Link-----*/
 .find_out_more a:link {
+    color: #8C74A5;
+    text-decoration: none;
+}
+
+/*-----Visited Link-----*/
+.find_out_more a:visited {
     color: #8C74A5;
 }
 
+/*-----When mouse overs it-----*/
+.find_out_more a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+.find_out_more a:active {
+    color: #8C74A5;
+}
+
+/*---------- contact_us for footer_content ----------*/
 .contact_us {
     text-align: left;
     width: 100%;
@@ -330,10 +413,28 @@ footer {
     margin: 6px;
 }
 
+/*-----Unvisited Link-----*/
 .contact_us a:link {
+    color: #8C74A5;
+    text-decoration: none;
+}
+
+/*-----Visited Link-----*/
+.contact_us a:visited {
     color: #8C74A5;
 }
 
+/*-----When mouse overs it-----*/
+.contact_us a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+.contact_us a:active {
+    color: #8C74A5;
+}
+
+/*---------- legal for footer_content ----------*/
 .legal {
     text-align: left;
     width: 100%;
@@ -346,40 +447,56 @@ footer {
     margin: 6px;
 }
 
+/*-----Unvisited Link-----*/
 .legal a:link {
     color: #8C74A5;
+    text-decoration: none;
 }
 
-a[href^="#top"] {
+/*-----Visited Link-----*/
+.legal a:visited {
     color: #8C74A5;
-    margin: 0 auto;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/*--------------------------------------------*/
+/*-----When mouse overs it-----*/
+.legal a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+.legal a:active {
+    color: #8C74A5;
+}
+
+/*--------------------------------------------
+Grid Layout
+--------------------------------------------*/
+/*---------- left_column for content_container2 ----------*/
 .left_column {
     grid-area: left_column;
 }
 
+/*---------- content for content_container2 ----------*/
 .content {
     grid-area: content;
 }
 
+/*---------- brand_info for footer_content ----------*/
 .brand_info {
     grid-area: brand_info;
 }
 
+/*---------- find_out_more for footer_content ----------*/
 .find_out_more {
     grid-area: find_out_more;
 }
 
+/*---------- contact_us for footer_content ----------*/
 .contact_us {
     grid-area: contact_us;
 }
 
+/*---------- legal for footer_content ----------*/
 .legal {
     grid-area: legal;
 }
@@ -390,6 +507,7 @@ Mobile first
 
 @media (max-width: 880px) {
 
+    /*---------- menu ----------*/
     .menu {
         display: flex;
     }
@@ -414,6 +532,7 @@ Mobile first
         border-top: none;
     }
 
+    /*---------- sub_menu ----------*/
     .sub_menu {
         display: flex;
         padding-right: 0.5em;
@@ -448,16 +567,19 @@ Mobile first
         margin: auto;
     }
 
+    /*---------- Expand & Shrink Button ----------*/
     .expand_shrink_button {
         margin-left: auto;
         margin-bottom: auto;
     }
 
+    /*---------- Expand & Shrink Button for menu in mobile view ----------*/
     .expand_shrink_menu_button {
         border: none;
         background-color: transparent;
     }
 
+    /*---------- Expand & Shrink Button for sub_menu in mobile view ----------*/
     .expand_shrink_sub_menu_button {
         border: none;
         background-color: transparent;
@@ -467,6 +589,7 @@ Mobile first
         display: none;
     }
 
+    /*---------- Create triangle for expand ----------*/
     .expand_triangle {
         width: 0;
         height: 0;
@@ -480,6 +603,7 @@ Mobile first
         display: none;        
     }
 
+    /*---------- Create triangle for shrink ----------*/
     .shrink_triangle {
         width: 0;
         height: 0;
@@ -489,38 +613,47 @@ Mobile first
         margin-top: auto;
     }
 
+    /*---------- Hide menu options in mobile view ----------*/
     .menu_option.hide_in_mobile {
         display: none;
     }
 
+    /*---------- Show menu options in mobile view ----------*/
     .menu_option.hide_in_mobile.display_block {
         display: block;
     }
 
+    /*---------- Show expand button for menu ----------*/
     .expand_shrink_menu_button.expand.display_block {
         display: block;
     }
 
+    /*---------- Show shrink button for menu ----------*/
     .expand_shrink_menu_button.shrink.display_block {
         display: block;
     }
 
+    /*---------- Hide sub_menu options in mobile view ----------*/
     .sub_menu_option.hide_in_mobile {
         display: none;
     }
 
+    /*---------- Show sub_menu options in mobile view ----------*/
     .sub_menu_option.hide_in_mobile.display_block {
         display: block;
     }
 
+    /*---------- Show expand button for sub_menu ----------*/
     .expand_shrink_sub_menu_button.expand.display_block {
         display: block;
     }
 
+    /*---------- Show shrink button for sub_menu ----------*/
     .expand_shrink_sub_menu_button.shrink.display_block {
         display: block;
     }
 
+    /*---------- content_container2 ----------*/
     .content_container2 {
         display: grid;
         grid-template-areas: 
@@ -528,14 +661,17 @@ Mobile first
             "content";
     }
 
+    /*---------- left_column for content_container2 ----------*/
     .left_column {
         width: 96%;
     }
 
+    /*---------- content for content_container & content_container2 ----------*/
     .content {
         width: 96%;
     }
 
+    /*---------- form ----------*/
     form label {
 
     }
@@ -559,10 +695,12 @@ Mobile first
 
     }
 
+    /*---------- filter ----------*/
     .filter {
 
     }
 
+    /*---------- footer_content ----------*/
     .footer_content {
         display: grid;
         grid-template-areas: 
@@ -572,19 +710,30 @@ Mobile first
             "legal";
     }
 
+    /*---------- brand_info for footer_content ----------*/
     .brand_info {        
         border-bottom: 3px solid #F9F8F5;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
+    /*---------- find_out_more for footer_content ----------*/
     .find_out_more {    
         border-bottom: 3px solid #F9F8F5;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
+    /*---------- contact_us for footer_content ----------*/
     .contact_us {      
         border-bottom: 3px solid #F9F8F5;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
+    /*---------- legal for footer_content ----------*/
     .legal {
+        padding: 10px;
     }
 
 }
@@ -601,6 +750,7 @@ Pad
 
 @media (min-width: 881px) {
 
+    /*---------- menu ----------*/
     .menu {
         display: flex;
         justify-content: center;
@@ -630,10 +780,12 @@ Pad
         border-right: none;
     }
     
+    /*---------- Login & Logout Button ----------*/
     .login_logout_button {
         margin-left: 0.5em;
     }
 
+    /*---------- sub_menu ----------*/
     .sub_menu {
         display: flex;
         justify-content: center;
@@ -663,39 +815,47 @@ Pad
         border-right: none;
     }
 
-    .inline_in_mobile li {
-        display: flex;
-    }
+    /*---------- Show all menu & sub_menu options ----------*/
 
     .hide_in_mobile {
         display: flex;
     }
 
+    /*---------- Hide Expand Button outside of Mobile view ----------*/
     .expand {
         display: none;
     }
 
+    /*---------- Hide Shrink Button outside of Mobile view ----------*/
     .shrink {
         display: none;
     }
 
+    /*---------- content_container2 ----------*/
     .content_container2 {
         margin: 0 auto;
         display: grid;
-        column-gap: 25px;
+        column-gap: 1em;
         grid-template-columns: 4fr 9fr;
         grid-template-areas: 
             "left_column content";
     }
 
+    /*---------- left_column for content_container2 ----------*/
     .left_column {
-        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
     }
 
+    /*---------- content for content_container and content_container2 ----------*/
     .content {
-        width: 100%;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
     }
 
+    /*---------- form ----------*/
     form label {
 
     }
@@ -723,6 +883,7 @@ Pad
 
     }
     
+    /*---------- accountDetailsArea ----------*/
     #accountDetailsArea {
 
     }
@@ -739,6 +900,7 @@ Pad
 
     }
 
+    /*---------- footer_content ----------*/
     .footer_content {
         display: grid;
         grid-template-columns: 3fr 3fr 3fr;
@@ -747,20 +909,24 @@ Pad
             "find_out_more contact_us legal";
     }
 
+    /*---------- brand_info for footer_content ----------*/
     .brand_info {
         margin-top: 1em;
         margin-bottom: 1em;
         border-bottom: 3px solid #F9F8F5;    
     }
 
+    /*---------- find_out_more for footer_content ----------*/
     .find_out_more {
         border-right: 3px solid #F9F8F5;
     }
 
+    /*---------- contact_us for footer_content ----------*/
     .contact_us {
         border-right: 3px solid #F9F8F5;
     }
 
+    /*---------- legal for footer_content ----------*/
     .legal {
     }
     
@@ -775,10 +941,12 @@ Laptop, computer
 
 @media (min-width: 70em) {
 
+    /*---------- menu ----------*/
     .menu li {
         font-size: 1em;
     }
 
+    /*---------- sub_menu  ----------*/
     .sub_menu li {
         font-size: 1em;
     }
