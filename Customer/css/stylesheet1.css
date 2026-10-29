@@ -1,6 +1,7 @@
 /*---------------------------------------------------------------------------------------
 Base Style for all screen
 ---------------------------------------------------------------------------------------*/
+/*---------- body  ----------*/
 body {
     margin: 5px auto;
     background-color: #F9F8F5;
@@ -48,31 +49,205 @@ small {
     font-size: 0.75em; /* 15px */
 }
 
-/*---------- Dark Colour----------*/
 .dark_colour {
-    
+
+     /*---------- body ----------*/
     body {
-        background-color: beige;
+        background-color: #141414;
+        color: #F9F8F5;
     }
 
+     /*---------- banner ----------*/
     .banner {
-        background-color: darkred;
+        background-color: #120719;
+        color: #E4D1F2;
     }
 
+    /*---------- menu ----------*/
     .menu {
-        background-color: darksalmon;
+        background-color: #200D2D;
+        color: #E4D1F2;
+    }
+    
+    /*----- Unvisited Link -----*/
+    .menu a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
     }
 
+    /*----- Visited Link -----*/
+    .menu a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .menu a:hover {
+        color: #F9F8F5;
+    }
+
+    /*----- The moment being click -----*/
+    .menu a:active {
+        color: #E4D1F2;;
+    }
+    
+    .login_logout_button {
+        background-color: #E4D1F2;;
+        color: #2E1341;
+    }
+
+    /*---------- sub_menu ----------*/
     .sub_menu {
-        background-color: darkgoldenrod;
+        background-color: #2E1341;
+        color: #E4D1F2;;
     }
 
+    /*----- Unvisited Link -----*/
+    .sub_menu a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
+    }
+
+    /*----- Visited Link -----*/
+    .sub_menu a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .sub_menu a:hover {
+        color: #F9F8F5;
+        /*Make font bigger*/
+    }
+
+    /*----- The moment being click -----*/
+    .sub_menu a:active {
+        color: #E4D1F2;;
+    }
+
+    /*---------- main ----------*/
     main {
-        background-color: darkgreen;
+
     }
 
+    /*---------- content_container ----------*/
+    .content_container {
+
+    }
+
+    /*---------- content_container2 ----------*/
+    .content_container2 {
+
+    }
+
+    /*---------- left_column ----------*/
+    .left_column {
+        background-color: #3C1855;
+        color: #E4D1F2;
+    }
+
+    /*---------- content ----------*/
+    .content {
+        color: #E4D1F2;
+    }
+    
+    /*---------- Navigation Button back to top ----------*/
+    a[href^="#top"] {
+        color: #E4D1F2;
+    }
+
+    /*---------- footer ----------*/
     footer {
-        background-color: darkblue;
+        background-color: #3C1855;
+    }
+
+    /*---------- footer_content ----------*/
+    .footer_content {
+
+    }
+
+    /*---------- brand_info ----------*/
+    .brand_info {
+        color: #E4D1F2;
+    }
+
+    /*---------- find_out_more ----------*/
+    .find_out_more {
+        color: #E4D1F2;
+    }
+    
+    /*----- Unvisited Link -----*/
+    .find_out_more a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
+    }
+
+    /*----- Visited Link -----*/
+    .find_out_more a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .find_out_more a:hover {
+        color: #F9F8F5;
+        /*Make font bigger*/
+    }
+
+    /*----- The moment being click -----*/
+    .find_out_more a:active {
+        color: #E4D1F2;;
+    }
+
+    /*---------- contact_us ----------*/
+    .contact_us {
+        color: #E4D1F2;
+    }
+    
+    /*----- Unvisited Link -----*/
+    .contact_us a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
+    }
+
+    /*----- Visited Link -----*/
+    .contact_us a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .contact_us a:hover {
+        color: #F9F8F5;
+        /*Make font bigger*/
+    }
+
+    /*----- The moment being click -----*/
+    .contact_us a:active {
+        color: #E4D1F2;;
+    }
+
+    /*---------- legal ----------*/
+    .legal {
+        color: #E4D1F2;
+    }
+    
+    /*----- Unvisited Link -----*/
+    .legal a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
+    }
+
+    /*----- Visited Link -----*/
+    .legal a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .legal a:hover {
+        color: #F9F8F5;
+        /*Make font bigger*/
+    }
+
+    /*----- The moment being click -----*/
+    .legal a:active {
+        color: #E4D1F2;;
     }
 
 }
@@ -116,8 +291,8 @@ small {
 /*---------- dark_mode ----------*/
 .dark_mode {
     display: none;
-    background-color: #8C74A5;
-    color: #F9F8F5;
+    background-color: #2E1341;
+    color: #BB96E4;
     border-radius: 5em;
     border: 0;
     font-size: 0.875em;
@@ -230,6 +405,7 @@ small {
 /*-----When mouse overs it-----*/
 .sub_menu a:hover {
     color: #4C2365;
+    /*Make font bigger*/
 }
 
 /*-----The moment being click-----*/
@@ -506,7 +682,24 @@ Mobile first
 ---------------------------------------------------------------------------------------*/
 
 @media (max-width: 880px) {
+    
+    .dark_colour {
+        .menu li{
+            border-top: 3px solid #E4D1F2;
+        }
 
+        .menu a:first-child {
+            border-top: none;
+        }
+
+        .sub_menu li {
+            border-top: 3px solid #E4D1F2;
+        }
+
+        .sub_menu a:first-child {
+            border-top: none;
+        }
+    }
     /*---------- menu ----------*/
     .menu {
         display: flex;
@@ -750,6 +943,24 @@ Pad
 
 @media (min-width: 881px) {
 
+    .dark_colour {
+        .menu li{
+            border-right: 3px solid #E4D1F2;
+        }
+
+        .menu a:last-child {
+            border-right: none;
+        }
+
+        .sub_menu li {
+            border-right: 3px solid #E4D1F2;
+        }
+
+        .sub_menu a:last-child {
+            border-right: none;
+        }
+    }
+
     /*---------- menu ----------*/
     .menu {
         display: flex;
@@ -778,6 +989,12 @@ Pad
 
     .menu li:last-child {
         border-right: none;
+    }
+    
+    /*-----When mouse overs it-----*/
+    .menu a:hover {
+        color: #4C2365;
+        font-size: 15px;
     }
     
     /*---------- Login & Logout Button ----------*/
@@ -813,6 +1030,12 @@ Pad
 
     .sub_menu li:last-child {
         border-right: none;
+    }
+    
+    /*-----When mouse overs it-----*/
+    .sub_menu a:hover {
+        color: #4C2365;
+        font-size: 15px;
     }
 
     /*---------- Show all menu & sub_menu options ----------*/

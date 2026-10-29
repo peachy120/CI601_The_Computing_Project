@@ -17,10 +17,16 @@ $member = $checkResult->fetch_assoc();
 if ($member && password_verify($password, $member['memberPassword'])) {
     $_SESSION['memberID'] = $member['memberID'];
     header("Location: ../template1.html");
+
+    //setcookie('login_member_username', $_POST['login_member_username'], time() + 60*60);
     exit;
 } else {
     header("Location: ../account_login.html?error=1");
     exit;
 }
+
+//if (isset($_COOKIE['login_member_username'])) {
+//    $currentLoggedInMember = $_COOKIE['login_member_username'];
+//}
 
 ?>
