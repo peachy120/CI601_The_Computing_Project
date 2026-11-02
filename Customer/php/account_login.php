@@ -14,19 +14,26 @@ $checkSQL->execute();
 $checkResult = $checkSQL->get_result();
 $member = $checkResult->fetch_assoc();
 
-if ($member && password_verify($password, $member['memberPassword'])) {
-    $_SESSION['memberID'] = $member['memberID'];
-    header("Location: ../template1.html");
+$checkResponse = ["username_exists" => false,
+                  "username_password_match" => false];
 
-    //setcookie('login_member_username', $_POST['login_member_username'], time() + 60*60);
-    exit;
-} else {
-    header("Location: ../account_login.html?error=1");
-    exit;
+if ($member) {
+
+    $checkResponse["username_exists"] = true;
+
+    if (password_verify($password, $member['memberPassword'])) {
+    
+        $checkResponse["username_password_match"] = true;
+
+        $_SESSION['memberID'] = $member['memberID'];
+
+        setcookie('login_member_username', $username, time() + 60*60, '/');
+
+    }
 }
 
-//if (isset($_COOKIE['login_member_username'])) {
-//    $currentLoggedInMember = $_COOKIE['login_member_username'];
-//}
+header("Content-Type: application/json");
+echo json_encode($checkResponse);
+exit;
 
 ?>

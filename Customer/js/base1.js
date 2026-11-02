@@ -10,6 +10,8 @@ lightModeButton.addEventListener("click", function(e) {
 
     e.preventDefault();
 
+    localStorage.setItem("background_colour", "light_mode");
+
     bodyColour.classList.remove("dark_colour");
 
     lightModeButton.classList.remove("display_left");
@@ -20,6 +22,8 @@ lightModeButton.addEventListener("click", function(e) {
 darkModeButton.addEventListener("click", function(e) {
 
     e.preventDefault();
+
+    localStorage.setItem("background_colour", "dark_mode");
 
     bodyColour.classList.add("dark_colour");
 

@@ -5,57 +5,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stylesheet1.css" rel="stylesheet" type="text/css">
         <title>Login</title>
     </head>
 
     <body>
 
-        <a id="top"></a>
+        <div class="background">
 
-        <header class="banner">
+            <a id="top"></a>
 
-        </header><!--class="banner"-->
+            <header class="banner">
 
-        <div class="showAtTop">
+            </header><!--class="banner"-->
 
-            <nav class="menu">
-                
-            </nav><!--class="menu"-->
+            <div class="showAtTop">
 
-            <nav class="sub_menu">
-                
-            </nav><!--class="sub_menu"-->
-    
-        </div><!--class="showAtTop"-->
-
-        <div class="content_container">
-
-            <main>
-
-                <h1>Login</h1>
-
-                <form id="login_member_form" action="php/account_login.php" method="POST">
-
-                    <label for="login_member_username">Username: </label>
-                    <input type="text" id="login_member_username" name="login_member_username">
-                    <span class="hint" id="hint_login_member_username_empty">Please enter your username</span>
-                    <span class="hint" id="hint_login_member_username_unknown">Username not found, Please re-enter</span>
-
-                    <label for="login_member_password">Password: </label>
-                    <input type="password" id="login_member_password" name="login_member_password">
-                    <span class="hint" id="hint_login_member_password_empty">Please enter your password</span>
-                    <span class="hint" id="hint_login_member_password_incorrect">Incorrect Password, Please re-enter</span>
-
-                    <button type="submit" id="login_member_button">Login</button>
+                <nav class="menu">
                     
-                </form>
+                </nav><!--class="menu"-->
 
-            </main>
+                <nav class="sub_menu">
+                    
+                </nav><!--class="sub_menu"-->
 
-        </div><!--class="content_container"-->
+            </div><!--class="showAtTop"-->
 
-        <footer>
-        </footer>
+            <div class="content_container">
+
+                <main>
+
+                    <h1>Login</h1>
+
+                    <form id="login_member_form" action="php/account_login.php" method="POST">
+
+                        <label for="login_member_username">Username: </label>
+                        <input type="text" id="login_member_username" name="login_member_username">
+                        <span class="hint" id="hint_login_member_username_empty">Please enter your username</span>
+                        <span class="hint" id="hint_login_member_username_unknown">Username not found, Please re-enter</span>
+
+                        <label for="login_member_password">Password: </label>
+                        <input type="password" id="login_member_password" name="login_member_password">
+                        <span class="hint" id="hint_login_member_password_empty">Please enter your password</span>
+                        <span class="hint" id="hint_login_member_password_incorrect">Incorrect Password, Please re-enter</span>
+
+                        <button type="submit" id="login_member_button">Login</button>
+                        
+                    </form>
+                    <script src="js/account_login.js"></script>
+
+                </main>
+
+            </div><!--class="content_container"-->
+
+            <footer>
+            </footer>
+
+        </div><!--class="background"-->
 
     </body>
 

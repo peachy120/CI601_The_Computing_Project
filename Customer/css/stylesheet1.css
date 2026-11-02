@@ -2,7 +2,7 @@
 Base Style for all screen
 ---------------------------------------------------------------------------------------*/
 /*---------- body  ----------*/
-body {
+.background {
     margin: 5px auto;
     background-color: #F9F8F5;
     color: #3D2F28;
@@ -51,13 +51,13 @@ small {
 
 .dark_colour {
 
-     /*---------- body ----------*/
-    body {
+    /*---------- background ----------*/
+    .background {
         background-color: #141414;
         color: #F9F8F5;
     }
 
-     /*---------- banner ----------*/
+    /*---------- banner ----------*/
     .banner {
         background-color: #120719;
         color: #E4D1F2;
@@ -146,7 +146,12 @@ small {
 
     /*---------- content ----------*/
     .content {
+        background-color: #2E1341;
         color: #E4D1F2;
+    }
+
+    form label {
+        font-weight: bolder;
     }
     
     /*---------- Navigation Button back to top ----------*/
@@ -442,10 +447,14 @@ main {
     margin-bottom: 1em;
 }
 
+.left_column p {
+    margin: 5px;
+}
+
 /*---------- content for content_container & content_container2 ----------*/
 .content {
     width: 100%;
-    background-color: pink;
+    background-color: #DED7E7;
     border-radius: 2px;
     padding: 0.5em;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -454,6 +463,9 @@ main {
     margin-bottom: 1em;
 }
 
+.content p{
+    margin: 5px;
+}
 
 /*---------- form ----------*/
 form {
@@ -465,6 +477,14 @@ form {
     padding-right: 1em;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     justify-self: center;
+}
+
+.hint {
+    display: none;
+}
+
+.hint.display {
+    display: block;
 }
 
 /*---------- accountDetailsArea for account.html ----------*/
@@ -515,6 +535,31 @@ footer {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     align-items: center;
+}
+
+footer p{
+    
+}
+
+/*-----Unvisited Link-----*/
+footer p a:link {
+    color: #8C74A5;
+    text-decoration: none;
+}
+
+/*-----Visited Link-----*/
+footer p a:visited {
+    color: #8C74A5;
+}
+
+/*-----When mouse overs it-----*/
+footer p a:hover {
+    color: #4C2365;
+}
+
+/*-----The moment being click-----*/
+footer p a:active {
+    color: #8C74A5;
 }
 
 .footer_content {
@@ -866,7 +911,8 @@ Mobile first
 
     /*---------- form ----------*/
     form label {
-
+        display: block;
+        padding: 5px;
     }
 
     form textarea {
@@ -881,11 +927,11 @@ Mobile first
     input[type="image"],
     input[type="time"],
     input[type="number"] {
-
+        display: block;
     }
 
     form button {
-
+        display: block;
     }
 
     /*---------- filter ----------*/
@@ -1079,8 +1125,20 @@ Pad
     }
 
     /*---------- form ----------*/
-    form label {
+    form {
+        display: grid;
+        grid-template-columns: 240px 480px;
+        row-gap: 10px;
+        justify-content: center;
+    }
 
+    .hint {
+        grid-column: 2;
+        font-size: small;
+    }
+
+    form label {
+        display: inline;
     }
 
     form textarea {
@@ -1095,10 +1153,13 @@ Pad
     input[type="image"],
     input[type="time"],
     input[type="number"] {
-
+        display: inline;
     }
 
     form button {
+        display: block;
+        grid-column: 1 / span 2;
+        justify-content: center;
 
     }
 
