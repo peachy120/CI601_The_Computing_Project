@@ -1,10 +1,23 @@
 //---------------------------------------------------------------------------------------
-// Control Colour Theme between light and dark
+// Check colour mode that user is currently on
 //---------------------------------------------------------------------------------------
+
 const bodyColour = document.querySelector("body");
 
 const lightModeButton = document.querySelector(".colour_button.light_mode");
-const darkModeButton = document.querySelector(".colour_button.dark_mode.display_left");
+const darkModeButton = document.querySelector(".colour_button.dark_mode");
+
+if (localStorage.getItem("background_colour") === "dark_mode") {
+    bodyColour.classList.add("dark_colour");
+
+    darkModeButton.classList.remove("display_left");
+    lightModeButton.classList.add("display_left");
+
+}
+
+//---------------------------------------------------------------------------------------
+// Control Colour Theme between light and dark
+//---------------------------------------------------------------------------------------
 
 lightModeButton.addEventListener("click", function(e) {
 

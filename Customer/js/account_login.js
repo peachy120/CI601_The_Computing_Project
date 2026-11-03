@@ -1,44 +1,3 @@
-// Check colour mode that user is currently on
-const bodyColour = document.querySelector("body");
-
-if (localStorage.getItem("background_colour") === "dark_mode") {
-    bodyColour.classList.add("dark_colour");
-}
-
-//---------------------------------------------------------------------------------------
-// Control Colour Theme between light and dark
-//---------------------------------------------------------------------------------------
-/////const bodyColour = document.querySelector("body");
-
-const lightModeButton = document.querySelector(".colour_button.light_mode");
-const darkModeButton = document.querySelector(".colour_button.dark_mode.display_left");
-
-lightModeButton.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    localStorage.setItem("background_colour", "light_mode");
-
-    bodyColour.classList.remove("dark_colour");
-
-    lightModeButton.classList.remove("display_left");
-    darkModeButton.classList.add("display_left");
-
-});
-
-darkModeButton.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    localStorage.setItem("background_colour", "dark_mode");
-
-    bodyColour.classList.add("dark_colour");
-
-    lightModeButton.classList.add("display_left");
-    darkModeButton.classList.remove("display_left");
-
-});
-
 //---------------------------------------------------------------------------------------
 // Login Form
 //---------------------------------------------------------------------------------------
@@ -83,7 +42,8 @@ loginButton.addEventListener("click", async function(e) {
 
     // Getting data from account_login.php
     try {
-        loginFormData = new FormData(loginMemberForm);
+
+        const loginFormData = new FormData(loginMemberForm);
 
         const response = await fetch ("../Customer/php/account_login.php", {
             method: "POST",

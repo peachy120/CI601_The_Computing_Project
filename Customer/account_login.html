@@ -16,47 +16,75 @@
             <a id="top"></a>
 
             <header class="banner">
-
+                <h1>Title</h1>
+                <h2>CI601 The Computing Project</h2>
+                <button class="colour_button light_mode">Switch to Light Mode</button>
+                <button class="colour_button dark_mode display_left">Switch to Dark Mode</button>
             </header><!--class="banner"-->
 
             <div class="showAtTop">
 
                 <nav class="menu">
-                    
+                    <ul>
+                        <li class="menu_option"><a href="home.html">Home</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="aboutUs.html">About Us</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="booking.html">Booking</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="onlineShop.html">Online Shop</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="event.html">Event</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="pet.html">Pet</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="menu">Menu</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="contact.html">Contact</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="blog.html">Blog</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="donation.html">Donate</a></li>
+                        <li class="menu_option hide_in_mobile account"><a href="account.html">My Account</a></li>
+                        <button class="menu_option hide_in_mobile login_logout_button">Login / Logout</button>
+                        <script src="js/account_authenticate.js"></script>
+                    </ul>
+                    <button class="expand_shrink_menu_button expand display_block"><div class="expand_triangle"></div></button>
+                    <button class="expand_shrink_menu_button shrink"><div class="shrink_triangle"></div></button>                    
                 </nav><!--class="menu"-->
 
                 <nav class="sub_menu">
-                    
+                    <ul>                  
+                        <li class="sub_menu_option">Login</li>  
+                        <li class="sub_menu_option hide_in_mobile"><a href="account_createAccount.html">Create Account</a></li>            
+                    </ul>
+                    <button class="expand_shrink_sub_menu_button expand display_block"><div class="expand_triangle"></div></button>
+                    <button class="expand_shrink_sub_menu_button shrink"><div class="shrink_triangle"></div></button>
                 </nav><!--class="sub_menu"-->
 
             </div><!--class="showAtTop"-->
+            <script src="js/base1.js"></script>
 
-            <div class="content_container">
-
-                <main>
+            <main>
+                
+                <div class="content_container">               
 
                     <h1>Login</h1>
 
+                    <!--Login Member Form-->
                     <form id="login_member_form" action="php/account_login.php" method="POST">
 
+                        <!--Username-->
                         <label for="login_member_username">Username: </label>
                         <input type="text" id="login_member_username" name="login_member_username">
-                        <span class="hint" id="hint_login_member_username_empty">Please enter your username</span>
-                        <span class="hint" id="hint_login_member_username_unknown">Username not found, Please re-enter</span>
+                        <span class="hint" id="hint_login_member_username_empty"> ~ Please enter your username</span>
+                        <span class="hint" id="hint_login_member_username_unknown"> ~ Username not found, Please re-enter</span>
 
+                        <!--Password-->
                         <label for="login_member_password">Password: </label>
                         <input type="password" id="login_member_password" name="login_member_password">
-                        <span class="hint" id="hint_login_member_password_empty">Please enter your password</span>
-                        <span class="hint" id="hint_login_member_password_incorrect">Incorrect Password, Please re-enter</span>
+                        <span class="hint" id="hint_login_member_password_empty"> ~ Please enter your password</span>
+                        <span class="hint" id="hint_login_member_password_incorrect"> ~ Incorrect Password, Please re-enter</span>
 
                         <button type="submit" id="login_member_button">Login</button>
                         
-                    </form>
+                    </form><!--id="login_member_form"-->
                     <script src="js/account_login.js"></script>
 
-                </main>
+                </div><!--class="content_container"-->
 
-            </div><!--class="content_container"-->
+            </main>
 
             <footer>
             </footer>

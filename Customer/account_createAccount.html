@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/stylesheet1.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+
+        <div class="background">
+
+            <a id="top"></a>
+
+            <header class="banner">
+                <h1>Title</h1>
+                <h2>CI601 The Computing Project</h2>
+                <button class="colour_button light_mode">Switch to Light Mode</button>
+                <button class="colour_button dark_mode display_left">Switch to Dark Mode</button>
+            </header><!--class="banner"-->
+
+            <div class="showAtTop">
+
+                <nav class="menu">
+                    <ul>
+                        <li class="menu_option"><a href="home.html">Home</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="aboutUs.html">About Us</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="booking.html">Booking</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="onlineShop.html">Online Shop</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="event.html">Event</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="pet.html">Pet</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="menu">Menu</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="contact.html">Contact</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="blog.html">Blog</a></li>
+                        <li class="menu_option hide_in_mobile"><a href="donation.html">Donate</a></li>
+                        <li class="menu_option hide_in_mobile account"><a href="account.html">My Account</a></li>
+                        <button class="menu_option hide_in_mobile login_logout_button">Login / Logout</button>
+                        <script src="js/account_authenticate.js"></script>
+                    </ul>
+                    <button class="expand_shrink_menu_button expand display_block"><div class="expand_triangle"></div></button>
+                    <button class="expand_shrink_menu_button shrink"><div class="shrink_triangle"></div></button> 
+                </nav><!--class="menu"-->
+
+                <nav class="sub_menu">
+                    <ul>
+                        <li class="sub_menu_option">Create Account</li>                  
+                        <li class="sub_menu_option hide_in_mobile"><a href="account_login.html">Login</a></li>            
+                    </ul>
+                    <button class="expand_shrink_sub_menu_button expand display_block"><div class="expand_triangle"></div></button>
+                    <button class="expand_shrink_sub_menu_button shrink"><div class="shrink_triangle"></div></button> 
+                </nav><!--class="sub_menu"-->
+
+            </div><!--class="showAtTop"-->
+            <script src="js/base1.js"></script>
+
+            <main>
+
+                <div class="content_container">
+                    
+                    <h1>Create Account</h1>
+
+                    <!--Create Member Account Form-->
+                    <form id="createAccount_member_form" action="php/account_createAccount.php" method="POST">
+
+                        <!-- Title -->
+                        <label for="createAccount_member_title">Title: </label>
+                        <select id="createAccount_member_title" name="createAccount_member_title">
+                            <option value=""></option>
+                            <option value="MR">Mr. </option>
+                            <option value="MRS">Mrs. </option>
+                            <option value="MISS">Miss</option>
+                            <option value="MS">Ms</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                        <span class="hint" id="hint_createAccount_member_title_empty"> ~ Please select a title</span>
+
+                        <!-- Firstname -->
+                        <label for="createAccount_member_firstname">Firstname: </label>
+                        <input type="text" id="createAccount_member_firstname" name="createAccount_member_firstname">
+                        <span class="hint" id="hint_createAccount_member_firstname_empty"> ~ Please enter your firstname</span>
+
+                        <!-- Lastname -->
+                        <label for="createAccount_member_lastname">Lastname: </label>
+                        <input type="text" id="createAccount_member_lastname" name="createAccount_member_lastname">
+                        <span class="hint" id="hint_createAccount_member_lastname_empty"> ~ Please enter your lastname</span>
+
+                        <!-- Date of Birth -->
+                        <label for="createAccount_member_dateOfBirth">Date of Birth: </label>
+                        <input type="date" id="createAccount_member_dateOfBirth" name="createAccount_member_dateOfBirth">
+                        <span class="hint" id="hint_createAccount_member_dateOfBirth_empty"> ~ Please select your date of birth</span>
+                        <span class="hint" id="hint_createAccount_member_dateOfBirth_invalid"> ~ Please select a valid date</span>
+                        <span class="hint" id="hint_createAccount_member_dateOfBirth_young"> ~ Sorry, you are too young to create an account</span>
+
+                        <!-- Email -->
+                        <label for="createAccount_member_email">Email: </label>
+                        <input type="email" id="createAccount_member_email" name="createAccount_member_email">
+                        <span class="hint" id="hint_createAccount_member_email_empty"> ~ Please enter your email</span>
+
+                        <!-- Tel -->
+                        <label for="createAccount_member_tel">Telephone Number: </label>
+                        <input type="tel" id="createAccount_member_tel" name="createAccount_member_tel">
+                        <span class="hint" id="hint_createAccount_member_tel_empty"> ~ Please enter your telephone number</span>
+
+                        <!-- Username -->
+                        <label for="createAccount_member_username">Username: </label>
+                        <input type="text" id="createAccount_member_username" name="createAccount_member_username">
+                        <span class="hint" id="hint_createAccount_member_username_empty"> ~ Please create and enter a username</span>
+                        <span class="hint" id="hint_createAccount_member_username_existed"> ~ Sorry, this username already exists, please create and enter another</span>
+
+                        <!-- Password -->
+                        <label for="createAccount_member_password">Password: </label>
+                        <input type="password" id="createAccount_member_password" name="createAccount_member_password">
+                        <span class="hint" id="hint_createAccount_member_password_empty"> ~ Please create and enter a password</span>
+                        <span class="hint" id="hint_createAccount_member_password_short"> ~ Password is too short, please create and enter another password</span>
+                        <span class="hint" id="hint_createAccount_member_password_noAZ"> ~ Please include at least 5 letter from A-Z</span>
+                        <span class="hint" id="hint_createAccount_member_password_noNumber"> ~ Please include at least 3 numbers</span>
+
+                        <!-- Re-Enter Password -->
+                        <label for="createAccount_member_password2">Re-enter Password: </label>
+                        <input type="password" id="createAccount_member_password2" name="createAccount_member_password2">
+                        <span class="hint" id="hint_createAccount_member_password2_empty"> ~ Please enter the password again</span>
+                        <span class="hint" id="hint_createAccount_member_password2_unmatch"> ~ Password does not match, please enter again</span>
+
+                        <button type="submit" id="createAccount_member_button">Create Account</button>
+
+                    </form><!--id="createAccount_member_form"-->
+                    <script src="js/account_createAccount.js"></script>
+
+                </div><!--class="content_container"-->
+            </main>
+
+            <h6><a href="#top">Back to Top</a></h6>
+
+            <footer>
+                
+                <div class="footer_content">
+                    <div class="brand_info">
+                        <h2>Brand Name</h2>
+                        <h3>Slogan</h3>
+                    </div><!--class="brand_info"-->                    
+                    
+                    <nav class="find_out_more">
+                        <h4>Find out more</h4>
+                        <ul>
+                            <li><a href="account_createAccount.html">Become a Member</a></li>
+                            <li><a href="booking.html">Booking</a></li>
+                            <li><a href="onlineShop.html">Online Shop</a></li>
+                            <li><a href="event.html">Event</a></li>
+                            <li><a href="pet.html">Pet</a></li>
+                            <li><a href="menu.html">Menu</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </nav><!--class="find_out_more"-->
+
+                    <nav class="contact_us">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li>Address: <a href=""></a>Address</li>
+                            <li>Ask a Question: <a href="contact_enquiry.html">Contact Form</a></li>
+                            <li>By Email: <a href="mailto:&subject=Click from footer">Email Address</a></li>
+                            <li>By Phone: <a href="tel:">Phone Number</a></li>
+                        </ul>
+                    </nav><!--class="contact_us"-->
+
+                    <nav class="legal">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="">Privacy</a></li>
+                            <li><a href="">Terms</a></li>
+                            <li><a href="">Cookies</a></li>
+                            <li><a href="">Accessibility</a></li>
+                        </ul>
+                    </nav><!--class="legal"-->
+                </div><!--class="footer_content"-->
+
+                <p>Built by: Kary C. <a href="mailto:k.ching1@uni.brighton.ac.uk&subject=Click from footer">k.ching1@uni.brighton.ac.uk</a></p>
+                <small>&copy; Website: 2026, .</small>
+            </footer>
+        </div><!--class="background"-->
+    </body>
+
+</html>
