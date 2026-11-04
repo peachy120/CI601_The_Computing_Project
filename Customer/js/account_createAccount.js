@@ -202,6 +202,8 @@ createAccount_button.addEventListener("click", function(e) {
     }
 
     if (dataOK) {
+        createAccountMemberForm.submit();
+
         console.log("Title: " + title);
         console.log("Firstname: " + firstname);
         console.log("Lastname: " + lastname);
