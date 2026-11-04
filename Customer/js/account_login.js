@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------------------
-// Login Form
+// Member Login Form
 //---------------------------------------------------------------------------------------
 
 const loginMemberForm = document.querySelector("#login_member_form");
@@ -13,9 +13,9 @@ const hint_loginMemberUsername_unknown = document.querySelector("#hint_login_mem
 const hint_loginMemberPassword_empty = loginMemberForm.querySelector("#hint_login_member_password_empty");
 const hint_loginMemberPassword_incorrect = document.querySelector("#hint_login_member_password_incorrect");
 
-const loginButton = loginMemberForm.querySelector("#login_member_button");
+const login_Button = loginMemberForm.querySelector("#login_member_button");
 
-loginButton.addEventListener("click", async function(e) {
+login_Button.addEventListener("click", async function(e) {
 
     e.preventDefault();
 

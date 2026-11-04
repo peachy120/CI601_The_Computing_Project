@@ -61,15 +61,15 @@
                     
                     <h1>Create Account</h1>
 
-                    <!--Create Member Account Form-->
-                    <form id="createAccount_member_form" action="php/account_createAccount.php" method="POST">
+                    <!--Create Member Account Form--><!--action="php/account_createAccount.php" method="POST"-->
+                    <form id="createAccount_member_form">
 
                         <!-- Title -->
                         <label for="createAccount_member_title">Title: </label>
                         <select id="createAccount_member_title" name="createAccount_member_title">
                             <option value=""></option>
-                            <option value="MR">Mr. </option>
-                            <option value="MRS">Mrs. </option>
+                            <option value="MR">Mr</option>
+                            <option value="MRS">Mrs</option>
                             <option value="MISS">Miss</option>
                             <option value="MS">Ms</option>
                             <option value="OTHER">Other</option>
@@ -97,16 +97,20 @@
                         <label for="createAccount_member_email">Email: </label>
                         <input type="email" id="createAccount_member_email" name="createAccount_member_email">
                         <span class="hint" id="hint_createAccount_member_email_empty"> ~ Please enter your email</span>
+                        <span class="hint" id="hint_createAccount_member_email_invalid"> ~ Please enter a valid email</span>
+                        <span class="hint" id="hint_createAccount_member_email_short"> ~ Email too short, Please enter again</span>
 
                         <!-- Tel -->
                         <label for="createAccount_member_tel">Telephone Number: </label>
                         <input type="tel" id="createAccount_member_tel" name="createAccount_member_tel">
                         <span class="hint" id="hint_createAccount_member_tel_empty"> ~ Please enter your telephone number</span>
+                        <span class="hint" id="hint_createAccount_member_tel_short">Phone Number to short, Please enter again</span>
 
                         <!-- Username -->
                         <label for="createAccount_member_username">Username: </label>
                         <input type="text" id="createAccount_member_username" name="createAccount_member_username">
                         <span class="hint" id="hint_createAccount_member_username_empty"> ~ Please create and enter a username</span>
+                        <span class="hint" id="hint_createAccount_member_username_short"> ~ Username too short, Please create and enter a username at least contain 5 characters</span>
                         <span class="hint" id="hint_createAccount_member_username_existed"> ~ Sorry, this username already exists, please create and enter another</span>
 
                         <!-- Password -->
