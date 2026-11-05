@@ -163,6 +163,16 @@ small {
         background-color: #E4D1F2;
         color: #2E1341;
     }
+
+    #account_details {
+        background-color: #2E1341;
+        color: #E4D1F2;
+    }
+
+    #account_details button {
+        background-color: #E4D1F2;
+        color: #2E1341;
+    }
     
     /*---------- Navigation Button back to top ----------*/
     a[href^="#top"] {
@@ -388,6 +398,10 @@ small {
     margin: auto;
 }
 
+.login_logout_button a:hover {
+
+}
+
 /*---------- sub_menu ----------*/
 .sub_menu {
     background-color: #8C74A5;
@@ -545,8 +559,8 @@ form button {
     display: block;
 }
 
-/*---------- accountDetailsArea for account.html ----------*/
-#accountDetailsArea {
+/*---------- account_details for account.html ----------*/
+#account_details {
     background-color: #EFECE6;
 	border-radius: 8px;
     padding-top: 2em;
@@ -556,11 +570,11 @@ form button {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 
-#accountDetailsArea p{
+#account_details p{
     font-weight: bold;
 }
 
-#accountDetailsArea button {
+#account_details button {
     display: block;
     background-color: #3D2F28;
     color: #F9F8F5;
@@ -569,7 +583,6 @@ form button {
     align-items: center;
     margin: 5px auto;
     padding: 0;
-    display: flex;
     height: 30px;
     width: 100px;
 }
@@ -999,6 +1012,24 @@ Mobile first
         justify-content: center;
     }
 
+    #account_details {
+        
+    }
+
+    #account_details p{
+        display: block;
+        font-weight: bold;
+    }
+
+    #account_details span{
+        display: block;
+    }
+
+    #account_details button{
+        display: block;
+
+    }
+
     /*---------- filter ----------*/
     .filter {
 
@@ -1234,21 +1265,34 @@ Pad
 
     }
     
-    /*---------- accountDetailsArea ----------*/
-    #accountDetailsArea {
-
+    /*---------- account_details ----------*/
+    #account_details {
+        display: grid;
+        grid-template-columns: 240px 480px;
+        row-gap: 10px;
+        column-gap: 20px;
+        justify-content: center;
+        width: 75%;
+        margin: auto;
     }
 
-    #accountDetailsArea p {
-
+    #account_details p {
+        display: inline;
+        grid-column: 1;
+        margin: 0;
     }
 
-    #accountDetailsArea span {
-
+    #account_details span {
+        display: inline;
+        grid-column: 2;
     }
 
-    #accountDetailsArea button {
-
+    #account_details button {
+        display: block;
+        grid-column: 1 / span 2;
+        justify-self: center;
+        width: 180px;
+        height: 36px;
     }
 
     /*---------- footer_content ----------*/
@@ -1279,6 +1323,7 @@ Pad
 
     /*---------- legal for footer_content ----------*/
     .legal {
+
     }
     
 }
@@ -1297,9 +1342,22 @@ Laptop, computer
         font-size: 1em;
     }
 
+    /*-----When mouse overs it-----*/
+    .menu a:hover {
+        color: #4C2365;
+        font-size: 18px;
+    }
+
     /*---------- sub_menu  ----------*/
     .sub_menu li {
         font-size: 1em;
     }
+
+    /*-----When mouse overs it-----*/
+    .sub_menu a:hover {
+        color: #4C2365;
+        font-size: 18px;
+    }
+    
 
 }
