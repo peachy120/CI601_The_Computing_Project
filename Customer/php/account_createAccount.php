@@ -17,19 +17,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['createAccount_member_password'];
     $joinedDate = date('Y-m-d');
 
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+    $checkSQL = $database->prepare("SELECT memberID, password FROM tMember WHERE username = ?");
+    $checkSQL->bind_param("s", $username);
+    $checkSQL->execute();
 
-    $insertSQL = $database->prepare("INSERT INTO tMember (memberTitle, memberFirstname, memberLastname, memberDateOfBirth, memberEmail, memberTel, memberTier, memberUsername, memberPassword, memberJoinedDate)
-                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $insertSQL->bind_param('ssssssssss', $title, $firstname, $lastname, $dob, $email, $tel, $tier, $username, $lastname, $joinedDate);
+    $checkResult = $checkSQL->get_result();
 
-    if ($insertSQL -> execute()) {
-        $_SESSION['memberID'] = $insertSQL->insert_id;
-        header("Location: ../account_login.html");
-        exit;
+    $checkResponse = ["username_exists" => true];
+
+    if ($checkResult->num_rows === 0) {
+
+        $checkResponse["username_exists"] = false;
+
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);    
+
+        $insertSQL = $database->prepare("INSERT INTO tMember (title, firstname, lastname, dateOfBirth, email, tel, tier, username, password, joinedDate)
+                                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $insertSQL->bind_param('ssssssssss', $title, $firstname, $lastname, $dob, $email, $tel, $tier, $username, $hashed_password, $joinedDate);
+
+        if ($insertSQL -> execute()) {
+            $insertSQL->insert_id;
+        } else {
+            echo "Error: " . $insertSQL->error;
+        }
     } else {
-        echo "Error: " . $insertSQL->error;
+        $checkResponse["username_exists"] = true;
     }
+    
 }
+
+header("Content-Type: application/json");
+echo json_encode($checkResponse);
+exit;
 
 ?>

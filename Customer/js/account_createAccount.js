@@ -37,7 +37,7 @@ const hint_memberPassword2_unmtach = createAccountMemberForm.querySelector("#hin
 
 const createAccount_button = createAccountMemberForm.querySelector("#createAccount_member_button");
 
-createAccount_button.addEventListener("click", function(e) {
+createAccount_button.addEventListener("click", async function(e) {
 
     e.preventDefault(e);
 
@@ -145,11 +145,38 @@ createAccount_button.addEventListener("click", function(e) {
         hint_memberUsername_empty.classList.remove("display");
         hint_memberUsername_short.classList.add("display");
         hint_memberUsername_existed.classList.remove("display");
+        dataOK = false;
     } else {
         hint_memberUsername_empty.classList.remove("display");
         hint_memberUsername_short.classList.remove("display");
         hint_memberUsername_existed.classList.remove("display");
     }
+
+    try {
+        const createAccountFormData = new FormData(createAccountMemberForm);
+
+        const response = await fetch ("../Customer/php/account_createAccount.php", {
+            method: "POST",
+            body: createAccountFormData,
+            credentials: "include"
+        })
+
+        const data = await response.json();
+
+        if (data.username_exists && username.length !== 0) {
+            hint_memberUsername_empty.classList.remove("display");
+            hint_memberUsername_short.classList.remove("display");
+            hint_memberUsername_existed.classList.add("display");
+            dataOK = false;
+        } else {
+            hint_memberUsername_empty.classList.remove("display");
+            hint_memberUsername_short.classList.remove("display");
+            hint_memberUsername_existed.classList.remove("display");
+        }
+        
+    } catch (error) {
+        console.error(error);
+    }   
 
     const findNumbers = password.match(/[0-9]/g);
     const numberCount = findNumbers ? findNumbers : 0;
@@ -201,7 +228,7 @@ createAccount_button.addEventListener("click", function(e) {
         hint_memberPassword2_unmtach.classList.remove("display");
     }
 
-    if (dataOK) {
+    if (dataOK) {        
         createAccountMemberForm.submit();
 
         console.log("Title: " + title);
@@ -213,5 +240,7 @@ createAccount_button.addEventListener("click", function(e) {
         console.log("Username: " + username);
         console.log("Password: " + password);
         console.log("Password2: " + password2);
+        
+        window.location.href = "../Customer/account_login.html";
     }
 })

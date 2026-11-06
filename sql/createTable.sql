@@ -9,22 +9,22 @@ CREATE TABLE tTier (
 
 -- tMember --
 CREATE TABLE tMember (
-    memberID            INT PRIMARY KEY AUTO_INCREMENT,
+    memberID      INT PRIMARY KEY AUTO_INCREMENT,
     title         ENUM("MR", "MRS", "MISS", "MS", "OTHER") DEFAULT "OTHER" NOT NULL,
-    tirstname     VARCHAR(255) NOT NULL,
+    firstname     VARCHAR(255) NOT NULL,
     lastname      VARCHAR(255) NOT NULL,
     dateOfBirth   DATE NOT NULL,
     email         VARCHAR(255) NOT NULL,
     tel           VARCHAR(20) NOT NULL,
-    tier          ENUM("PLATINUM", "DIAMOND", "GOLD", "SILVER", "BRONZE") DEFAULT "BRONZE" NOT NULL,
+    tier          VARCHAR(255) NOT NULL,
     username      VARCHAR(20) NOT NULL,
     password      VARCHAR(255) NOT NULL,
     joinedDate    DATE NOT NULL
 );
 
--- Making memberTier as Foreign Key --
+-- Making tier as Foreign Key --
 ALTER TABLE tMember
-ADD CONSTRAINT FK_memberTier_tMember FOREIGN KEY (memberTier) REFERENCES tTier (tier);
+ADD CONSTRAINT FK_tier_tMember FOREIGN KEY (tier) REFERENCES tTier (tier);
 
 -- tFloor --
 CREATE TABLE tFloor (

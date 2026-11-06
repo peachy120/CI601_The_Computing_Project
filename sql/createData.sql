@@ -8,9 +8,10 @@ VALUES
     ("BRONZE", "0% OFF", "0% OFF", "0% OFF", "0");
 
 -- tMember --
-INSERT INTO tMember ()
+INSERT INTO tMember (memberID, title, firstname, lastname, dateOfBirth, email, tel, tier, username, password, joinedDate)
 VALUES
-    (),
+    (memberID, "title", "firstname", "lastname", "dateOfBirth", "email", "tel", "tier", "username", "password", "joinedDate"),
+    (memberID, "title", "firstname", "lastname", "dateOfBirth", "email", "tel", "tier", "username", "password", "joinedDate"),
 
 -- tFloor --
 INSERT INTO tFloor (floor, for, capacity, accessibility, price)
@@ -186,9 +187,17 @@ VALUES
     (),
 
 -- tEventType --
-INSERT INTO tEventType ()
+INSERT INTO tEventType (eventType, floor, capacity, ageLimit, price)
 VALUES
-    (),
+    ("CAT-BIRTHDAY", floor, capacity, ageLimit, price),
+    ("DOG-BIRTHDAY", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
+    ("eventType", floor, capacity, ageLimit, price),
 
 -- tEvent --
 INSERT INTO tEvent ()
@@ -236,14 +245,27 @@ VALUES
     (),
 
 -- tWork --
-INSERT INTO tWork ()
+INSERT INTO tWork (workCode, name, access, description)
 VALUES
-    (),
+    ("STOC", "STOCKER", "PRODUCT, WORK-RECORD", "Keep track on products sells. Order low-stock product to prevent product sold out fully."),
+    ("RECE", "RECEPTIONIST", "BOOKING, CONTACT, PAYMENT, EVENT, WORK-RECORD ", "Manages Booking and Events. Reply Enquiries and check on payments."),
+    ("SECU", "SECURITY", "CCTV, WORK-RECORD", "Keep an eye on CCTVs in each pet area to keep all pets and human safe."),
+    ("DRIV", "DRIVER", "ONLINE-ORDER, WORK-RECORD", "Deliver order to customers' door. Only able to access orderID and delivery address."),
+    ("CLEA", "CLEANER", "PET-AREA, WORK-RECORD", "Keep pet area always clean"),
+    ("PACK", "ORDER PACKER", "ONLINE-ORDER, WORK-RECORD", "Pack online orders."),
+    ("CREA", "CONTENT-CREATOR", "BLOG, CONTACT-FEEDBACK, WORK-RECORD", "Check comments on blogs from customers. Think of new and intresting ideas"),
+    ("CHEF", "CHEF", "MENU, WORK-RECORD", "Make meals for humans and pets. Think of new / seasonal menu ideas."),
+    ("WAIT", "WAITER", "PET-AREA, PET, DIARY, WORK-RECORD", "Serve customers within the pet area. Keep eye on pets behaviour. Make sure customers and pets are safe within visible area."),
+    ("CARE", "PET-CARER", "PET, PET-DIARY, SHOWER, CHECK-UP, WORK-RECORD", "Monitor pets' daily. Follow up on pets' shower and check up schedule. Need to stay in shop at night sometimes.");
 
 -- tPosition --
-INSERT INTO tPosition ()
+INSERT INTO tPosition (positionCode, name, access)
 VALUES
-    (),
+    ("MAN", "MANAGER", "access"),
+    ("SEN", "SENIOR-STAFF", "access"),
+    ("PLA", "PLAIN-STAFF", "access"),
+    ("JUN", "JUNIOR-STAFF", "access"),
+    ("INT", "INTER", "access"),
 
 -- tStaff --
 INSERT INTO tStaff ()

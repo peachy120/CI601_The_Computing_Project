@@ -20,12 +20,12 @@ fetch("../Customer/php/account.php", {
     const username = document.querySelector("#account_member_username");
 
     id.textContent = data.memberID;
-    firstname.textContent = data.memberFirstname;
-    lastname.textContent = data.memberLastname;
-    dob.textContent = data.memberDateOfBirth;
-    email.textContent = data.memberEmail;
-    tel.textContent = data.memberTel;
-    tier.textContent = data.memberTier;
-    joinedDate.textContent = data.memberJoinedDate;
-    username.textContent = data.memberUsername;
+    firstname.textContent = data.firstname;
+    lastname.textContent = data.lastname;
+    dob.textContent = data.dateOfBirth;
+    email.textContent = data.email;
+    tel.textContent = data.tel;
+    tier.textContent = data.tier;
+    joinedDate.textContent = data.joinedDate;
+    username.textContent = data.username;
 })

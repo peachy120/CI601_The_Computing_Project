@@ -7,7 +7,7 @@ require 'database.php';
 $username = $_POST['login_member_username'];
 $password = $_POST['login_member_password'];
 
-$checkSQL = $database->prepare("SELECT memberID, memberPassword FROM tMember WHERE memberUsername = ?");
+$checkSQL = $database->prepare("SELECT memberID, password FROM tMember WHERE username = ?");
 $checkSQL->bind_param("s", $username);
 $checkSQL->execute();
 
@@ -21,7 +21,7 @@ if ($member) {
 
     $checkResponse["username_exists"] = true;
 
-    if (password_verify($password, $member['memberPassword'])) {
+    if (password_verify($password, $member['password'])) {
     
         $checkResponse["username_password_match"] = true;
 

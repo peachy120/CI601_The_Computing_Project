@@ -13,7 +13,7 @@ if (!isset($_SESSION['memberID'])) {
 
 $memberID = $_SESSION['memberID'];
 
-$getDetailsSQL = $database->prepare("SELECT memberID, memberFirstname, memberLastname, memberDateOfBirth, memberEmail, memberTel, memberTier, memberJoinedDate, memberUsername FROM tMember WHERE memberID = ?");
+$getDetailsSQL = $database->prepare("SELECT memberID, firstname, lastname, dateOfBirth, email, tel, tier, joinedDate, username FROM tMember WHERE memberID = ?");
 $getDetailsSQL->bind_param("i", $memberID);
 $getDetailsSQL->execute();
 
