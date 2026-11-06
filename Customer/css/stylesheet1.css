@@ -150,30 +150,6 @@ small {
         color: #E4D1F2;
     }
 
-    form {
-        background-color: #2E1341;
-        color: #E4D1F2;
-    }
-
-    form label {
-
-    }
-
-    form button {
-        background-color: #E4D1F2;
-        color: #2E1341;
-    }
-
-    #account_details {
-        background-color: #2E1341;
-        color: #E4D1F2;
-    }
-
-    #account_details button {
-        background-color: #E4D1F2;
-        color: #2E1341;
-    }
-    
     /*---------- Navigation Button back to top ----------*/
     a[href^="#top"] {
         color: #E4D1F2;
@@ -491,66 +467,6 @@ main {
     margin: 5px;
 }
 
-/*---------- form ----------*/
-form {
-    background-color: #EFECE6;
-    border-radius: 5px;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-    justify-self: center;
-}
-
-form label {
-    
-}
-
-form textarea {
-
-}
-
-form select {
-    width: 100%;
-    height: 18px;
-    justify-self: center;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-form input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="password"],
-input[type="image"],
-input[type="number"] {
-    width: 100%;
-    height: 18px;
-    justify-self: center;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-form input[type="date"],
-input[type="time"] {
-    width: 100%;
-    height: 18px;
-    justify-self: center;
-    box-sizing: border-box;
-    padding: 10px;
-}
-
-form button {
-    background-color: #3D2F28;
-    color: #F9F8F5;
-    border-radius: 5em;
-    justify-content: center;
-    align-items: center;
-    margin: 5px auto;
-    font-weight: bold;
-}
-
 .hint {
     display: none;
 }
@@ -559,33 +475,6 @@ form button {
     display: block;
 }
 
-/*---------- account_details for account.html ----------*/
-#account_details {
-    background-color: #EFECE6;
-	border-radius: 8px;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 1em;
-    padding-right: 1em;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
-}
-
-#account_details p{
-    font-weight: bold;
-}
-
-#account_details button {
-    display: block;
-    background-color: #3D2F28;
-    color: #F9F8F5;
-    border-radius: 5em;
-    justify-content: center;
-    align-items: center;
-    margin: 5px auto;
-    padding: 0;
-    height: 30px;
-    width: 100px;
-}
 
 /*---------- Navigation Button back to top ----------*/
 a[href^="#top"] {
@@ -841,6 +730,14 @@ Mobile first
         border-top: none;
     }
 
+    .menu_option.hide_in_mobile.account.display_block {
+        display: none;
+    }
+
+    .menu_option.hide_in_mobile.account.display_loggedIn.display_block {
+        display: block;
+    }
+
     /*---------- sub_menu ----------*/
     .sub_menu {
         display: flex;
@@ -978,57 +875,7 @@ Mobile first
     /*---------- content for content_container & content_container2 ----------*/
     .content {
         width: 96%;
-    }
-
-    /*---------- form ----------*/
-    form {
-        width: 95%;
-    }
-
-    form label {
-        display: block;
-        padding: 5px;
-    }
-
-    form textarea {
-
-    }
-
-    form input[type="text"],
-    input[type="date"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="password"],
-    input[type="image"],
-    input[type="time"],
-    input[type="number"] {
-        display: block;
-    }
-
-    form button {
-        display: block;
-        height: 30px;
-        width: 120px;
-        justify-content: center;
-    }
-
-    #account_details {
-        
-    }
-
-    #account_details p{
-        display: block;
-        font-weight: bold;
-    }
-
-    #account_details span{
-        display: block;
-    }
-
-    #account_details button{
-        display: block;
-
-    }
+    }    
 
     /*---------- filter ----------*/
     .filter {
@@ -1129,6 +976,14 @@ Pad
         padding-right: 0.5em;
     }
 
+    .menu_option.hide_in_mobile.account.display_loggedIn {
+        display: none;
+    }
+
+    .menu_option.hide_in_mobile.account.display_loggedIn.display {
+        display: flex;
+    }
+
     .menu li:last-child {
         border-right: none;
     }
@@ -1220,79 +1075,8 @@ Pad
         box-sizing: border-box;
     }
 
-    /*---------- form ----------*/
-    form {
-        display: grid;
-        grid-template-columns: 240px 480px;
-        row-gap: 10px;
-        justify-content: center;
-    }
-
-    .hint {
-        grid-column: 2;
-        font-size: small;
-    }
-
-    form label {
-        display: inline;
-    }
-
-    form textarea {
-
-    }
-
-    form input[type="text"],
-    input[type="date"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="password"],
-    input[type="image"],
-    input[type="time"],
-    input[type="number"] {
-        display: inline;
-    }
-
-    form button {
-        display: block;
-        width: 180px;
-        height: 36px;
-        grid-column: 1 / span 2;
-        justify-content: center;
-        align-items: center;
-    }
-
     .filter {
 
-    }
-    
-    /*---------- account_details ----------*/
-    #account_details {
-        display: grid;
-        grid-template-columns: 240px 480px;
-        row-gap: 10px;
-        column-gap: 20px;
-        justify-content: center;
-        width: 75%;
-        margin: auto;
-    }
-
-    #account_details p {
-        display: inline;
-        grid-column: 1;
-        margin: 0;
-    }
-
-    #account_details span {
-        display: inline;
-        grid-column: 2;
-    }
-
-    #account_details button {
-        display: block;
-        grid-column: 1 / span 2;
-        justify-self: center;
-        width: 180px;
-        height: 36px;
     }
 
     /*---------- footer_content ----------*/

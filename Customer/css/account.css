@@ -1,0 +1,105 @@
+.dark_colour {
+
+    #account_details {
+        background-color: #2E1341;
+        color: #E4D1F2;
+    }
+
+    #account_details button {
+        background-color: #E4D1F2;
+        color: #2E1341;
+    }
+
+}
+
+#account_details {
+    background-color: #EFECE6;
+    color: #3D2F28;
+	border-radius: 5px;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    justify-self: center;
+}
+
+#account_details p{
+    font-weight: bold;
+}
+
+#account_details button {
+    display: block;
+    background-color: #3D2F28;
+    color: #F9F8F5;
+    border-radius: 5em;
+    justify-content: center;
+    align-items: center;
+    margin: 5px auto;
+    padding: 0;
+    height: 30px;
+    width: 100px;
+}
+
+
+/*---------------------------------------------------------------------------------------
+Mobile first
+---------------------------------------------------------------------------------------*/
+
+@media (max-width: 880px) {
+    #account_details {
+        width: 95%;
+    }
+
+    #account_details p{
+        display: block;
+        font-weight: bold;
+    }
+
+    #account_details span{
+        display: block;
+    }
+
+    #account_details button{
+        display: block;
+
+    }
+}
+/*---------------------------------------------------------------------------------------
+Pad
+---------------------------------------------------------------------------------------*/
+
+@media (min-width: 881px) {
+    /*---------- account_details ----------*/
+    #account_details {
+        display: grid;
+        grid-template-columns: 240px 480px;
+        row-gap: 10px;
+        column-gap: 20px;
+        justify-content: center;
+    }
+
+    #account_details p {
+        display: inline;
+        grid-column: 1;
+        margin: 0;
+    }
+
+    #account_details span {
+        display: inline;
+        grid-column: 2;
+    }
+
+    #account_details button {
+        display: block;
+        grid-column: 1 / span 2;
+        justify-self: center;
+        width: 180px;
+        height: 36px;
+    }
+}
+
+/*---------------------------------------------------------------------------------------
+Laptop, computer
+---------------------------------------------------------------------------------------*/
+

@@ -9,13 +9,13 @@ fetch("../Customer/php/account_sessionStatus.php", {
         const loginLogoutButton = document.querySelector(".login_logout_button");
 
         if (data.logged_in) {
-            account.classList.add("display");
+            account.classList.add("display_loggedIn");
 
             loginLogoutButton.textContent = "Log out";
             loginLogoutButton.onclick = () => window.location.href = "../Customer/php/account_logout.php";
 
         } else {
-            account.classList.remove("display");
+            account.classList.remove("display_loggedIn");
 
             loginLogoutButton.textContent = "Login";
             loginLogoutButton.onclick = () => window.location.href = "../Customer/account_login.html";
