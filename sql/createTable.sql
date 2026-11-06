@@ -186,7 +186,6 @@ CREATE TABLE tOnlineOrder (
     shoppingCartID  INT NOT NULL,
     date            DATE NOT NULL,
     time            TIME NOT NULL,
-    total           DECIMAL(10,2) NOT NULL,
     status          ENUM("PENDING", "PAID", "PACKING", "READY-TO-BE-COLLECT", "OUT-FOR-DELIVERY", "DELIVERED") DEFAULT "PENDING" NOT NULL
 );
 
@@ -196,11 +195,11 @@ ADD CONSTRAINT FK_shoppingCartID_tOnlineOrder FOREIGN KEY (shoppingCartID) REFER
 
 -- tEventType --
 CREATE TABLE tEventType (
-    eventType       
-    floor
-    capacity
-    ageLimit
-    price
+    eventType       VARCHAR(255) PRIMARY KEY,
+    floor           INT NOT NULL,
+    capacity        INT NOT NULL,
+    ageLimit        INT NOT NULL,
+    price           DECIMAL(10,2) NOT NULL
 );
 
 -- tEvent --
@@ -221,34 +220,46 @@ ADD CONSTRAINT FK_type_tEvent FOREIGN KEY (type) REFERENCES tEventType (eventTyp
 
 -- tTicket --
 CREATE TABLE tTicket (
-    ticketID
-    eventID
-    quantity
-    subTotal
+    ticketID        INT PRIMARY KEY AUTO_INCREMENT,
+    eventID         VARCHAR(255) NOT NULL,
+    quantity        INT NOT NULL,
+    subTotal        DECIMAL(10,2) NOT NULL
 );
 
 -- Making eventID as Foriegn Key --
+ALTER TABLE tTicket
+ADD CONSTRAINT FK_eventID_tTicket FOREIGN KEY (eventID) REFERENCES tEvent (eventID);
 
 -- tTicketBasket --
 CREATE TABLE tTicketBasket (
-    ticketBasketID
-    memberID
-    ticketID
-    noOfEvent
-    noOfTicket
-    total
+    ticketBasketID      INT PRIMARY KEY AUTO_INCREMENT,
+    memberID            INT NOT NULL,
+    ticketID            INT NOT NULL,
+    noOfEvent           INT NOT NULL,
+    noOfTicket          INT NOT NULL,
+    total               DECIMAL(10,2) NOT NULL
 );
 
 -- Making memberID as Foriegn Key --
+ALTER TABLE tTicketBasket
+ADD CONSTRAINT FK_memberID_tTicketBasket FOREIGN KEY (memberID) REFERENCES tMember (memberID);
 
 -- Making ticketID as Foriegn Key
+ALTER TABLE tTicketBasket
+ADD CONSTRAINT FK_ticketID_tTicketBasket FOREIGN KEY (ticketID) REFERENCES tTicket (ticketID);
 
 -- tTicketOrder --
 CREATE TABLE tTicketOrder (
-
+    ticketOrderID       INT PRIMARY KEY AUTO_INCREMENT,
+    ticketBasketID      INT NOT NULL,
+    date                DATE NOT NULL,
+    time                TIME NOT NULL,
+    status              ENUM("PENDING", "PAID", "ISSUED") DEFAULT "PENDING" NOT NULL
 );
 
--- Making tTicketBasket as Foriegn Key --
+-- Making ticketBasketID as Foriegn Key --
+ALTER TABLE tTicketOrder
+ADD CONSTRAINT FK_ticketBasketID_tTicketOrder FOREIGN KEY (ticketBasketID) REFERENCES tTicketBasket (ticketBasketID);
 
 -- tDontaion --
 CREATE TABLE tDonation (
@@ -375,13 +386,13 @@ ADD CONSTRAINT FK_positionCode_tStaff FOREIGN KEY (positionCode) REFERENCES tPos
 
 -- tWorkRecord --
 CREATE TABLE tWorkRecord (
-    workRecord
-    staffID
-    workCode
-    date
-    startTime
-    endTime
-    description
+    workRecord      VARCHAR(255) PRIMARY KEY,
+    staffID         INT NOT NULL,
+    workCode        ENUM("STOC", "CASH", "SECU", "DRIV", "CLEA", "PACK", "CREA", "CHEF") DEFAULT "STOC" NOT NULL,
+    date            DATE NOT NULL,
+    startTime       TIME NOT NULL,
+    endTime         TIME,
+    description     LONGTEXT NOT NULL
 );
 
 -- Making staffID as Foreign Key --
@@ -394,30 +405,79 @@ ADD CONSTRAINT FK_workCode_tWorkRecord FOREIGN KEY (workCode) REFERENCES tWork (
 
 -- tPet --
 CREATE TABLE tPet (
-
+    petID               INT PRIMARY KEY AUTO_INCREMENT,
+    name                VARCHAR(255) NOT NULL,
+    gender              ENUM("GIRL", "BOY", "UNKNOWN") DEFAULT "UNKNOWN" NOT NULL,
+    dateOfBirth         DATE NOT NULL,
+    species             ENUM("CAT", "DOG") DEFAULT "CAT" NOT NULL,
+    breed               VARCHAR(255) NOT NULL,
+    colour              VARCHAR(255) NOT NULL,
+    size                ENUM("LARGE", "MEDIUM", "SMALL") DEFAULT "SMALL" NOT NULL,
+    imageURL            VARCHAR(255),
+    description         LONGTEXT NOT NULL,
+    openForAdoption     ENUM("YES", "NO", "NOT-APPLIED") DEFAULT "NOT-APPLIED" NOT NULL,
+    firstDayDate        DATE
 );
-
 
 -- tDiary --
 CREATE TABLE tDiary (
-
+    diaryID                     INT PRIMARY KEY AUTO_INCREMENT,
+    petID                       INT NOT NULL,
+    morningStatus               ENUM("PLAYFUL", "ENERGETIC", "GRUMPY", "MISCHIEVOUS", "SOCIABLE", "HAPPY", "OTHER") DEFAULT "OTHER" NOT NULL,
+    morningStatusDescription    LONGTEXT NOT NULL,
+    breakfast                   ENUM("YES", "NO") DEFAULT "NO",
+    lunch                       ENUM("YES", "NO") DEFAULT "NO",
+    dinner                      ENUM("YES", "NO") DEFAULT "NO",
+    treat                       ENUM("YES", "NO") DEFAULT "NO",
+    bathroom                    ENUM("YES", "NO") DEFAULT "NO",
+    eveningStatus               ENUM("PLAYFUL", "ENERGETIC", "GRUMPY", "MISCHIEVOUS", "SOCIABLE", "HAPPY", "OTHER") DEFAULT "OTHER" NOT NULL,
+    eveningStatusDescription    LONGTEXT,
+    latestUpdateTime            TIME NOT NULL,
+    latestUpdateStaffID         INT NOT NULL
 );
 
 -- Making petID as Foreign Key --
+ALTER TABLE tDiary
+ADD CONSTRAINT FK_petID_tDiary FOREIGN KEY (petID) REFERENCES tPet (petID);
+
+-- Making latestUpdateStaffID as Foreign Key --
+ALTER TABLE tDiary
+ADD CONSTRAINT FK_latestUpdateStaffID_tDiary FOREIGN KEY (latestUpdateStaffID) REFERENCES tStaff (staffID);
 
 -- tCheckUp --
 CREATE TABLE tCheckUp (
-
+    checkUpID               INT PRIMARY KEY AUTO_INCREMENT,
+    petID                   INT NOT NULL,
+    date                    DATE NOT NULL,
+    time                    TIME NOT NULL,
+    status                  ENUM("EXCELLENT", "GOOD", "NEED-MORE-CARE") DEFAULT "GOOD",
+    checkUpWithStaffID      INT,
 );
 
 -- Making petID as Foreign Key --
+ALTER TABLE tCheckUp
+ADD CONSTRAINT FK_petID_tCheckUp FOREIGN KEY (petID) REFERENCES tPet (petID);
+
+-- Making checkUpWithStaffID as Foreign Key --
+ALTER TABLE tCheckUp
+ADD CONSTRAINT FK_checkUpWithStaffID_tCheckUp FOREIGN KEY (checkUpWithStaffID) REFERENCES tStaff (staffID);
 
 -- tShower --
 CREATE TABLE tShower (
-
+    showerID            INT PRIMARY KEY AUTO_INCREMENT,
+    petID               INT NOT NULL,
+    date                DATE NOT NULL,
+    time                TIME NOT NULL,
+    showerWithStaffID   INT
 );
 
 -- Making petID as Foreign Key --
+ALTER TABLE tShower
+ADD CONSTRAINT FK_petID_tShower FOREIGN KEY (petID) REFERENCES tPet (petID);
+
+-- Making showerWithStaffID as Foreign Key --
+ALTER TABLE tShower
+ADD CONSTRAINT FK_showerWithStaffID_tShower FOREIGN KEY (showerWithStaffID) REFERENCES tStaff (staffID);
 
 CREATE TABLE t (
 
