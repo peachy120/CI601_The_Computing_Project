@@ -1,4 +1,12 @@
 //---------------------------------------------------------------------------------------
+// Button in left_column
+//---------------------------------------------------------------------------------------
+
+const leftColumn_accountDetails_button = document.querySelector("#left_column_account_details_button");
+const leftColumn_updateDetails_button = document.querySelector("#left_column_update_details_button");
+const leftColumn_changePassword_button = document.querySelector("#left_column_change_password_button");
+
+//---------------------------------------------------------------------------------------
 // Getting Buttons and forms
 //---------------------------------------------------------------------------------------
 
@@ -6,13 +14,12 @@ const accountDetailsArea = document.querySelector("#account_details_area");
 const updateDetailsArea = document.querySelector("#update_details");
 const changePasswordArea = document.querySelector("#change_password");
 
-const updateDetailsButton = accountDetailsArea.querySelector("#account_member_update_details_button");
-const changePasswordButton = accountDetailsArea.querySelector("#account_member_change_password_button");
-const deleteAccountButton = accountDetailsArea.querySelector("#account_member_delete_account_button");
+const accountDetails_updateDetails_button = accountDetailsArea.querySelector("#account_member_update_details_button");
+const accountDetails_changePassword_button = accountDetailsArea.querySelector("#account_member_change_password_button");
+const accountDetails_deleteAccount_button = accountDetailsArea.querySelector("#account_member_delete_account_button");
 
-updateDetailsButton.addEventListener("click", function(e) {
+accountDetails_updateDetails_button.addEventListener("click", function(e) {
 
-    console.log("testing");
     e.preventDefault();
 
     accountDetailsArea.classList.remove("display");
@@ -20,13 +27,19 @@ updateDetailsButton.addEventListener("click", function(e) {
     changePasswordArea.classList.remove("display");
 })
 
-changePasswordButton.addEventListener("click", function(e) {
+accountDetails_changePassword_button.addEventListener("click", function(e) {
     
     e.preventDefault();
 
     accountDetailsArea.classList.remove("display");
     updateDetailsArea.classList.remove("display");
     changePasswordArea.classList.add("display");
+})
+
+accountDetails_deleteAccount_button.addEventListener("click", function(e) {
+
+    e.preventDefault();
+    
 })
 
 //---------------------------------------------------------------------------------------
@@ -51,7 +64,7 @@ const currentPassword = changePasswordForm.querySelector("#account_member_change
 const newPassword = changePasswordForm.querySelector("#account_member_change_password_new_password");
 const newPassword2 = changePasswordForm.querySelector("#account_member_change_password_new_password2");
 
-const hint_currentPassword_empty = changePasswordForm.querySelector("#hint+account_member_change_password_current_password_empty");
+const hint_currentPassword_empty = changePasswordForm.querySelector("#hint_account_member_change_password_current_password_empty");
 const hint_currentPassword_unmatch = changePasswordForm.querySelector("#hint_account_member_change_password_current_password_unmatch");
 const hint_newPassword_empty = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_empty");
 const hint_newPassword_short = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_short");

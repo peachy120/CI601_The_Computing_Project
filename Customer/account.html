@@ -69,7 +69,9 @@
                 <div class="content_container2">
 
                     <div class="left_column">
-
+                        <button type="submit" class="left_column_account_button" id="left_column_account_details_button">My Details</button>
+                        <button type="submit" class="left_column_account_button" id="left_column_update_details_button">Update My Details</button>
+                        <button type="submit" class="left_column_account_button" id="left_column_change_password_button">Change Password</button>
                     </div><!--class="left_column"-->
 
                     <div class="content">
@@ -179,19 +181,19 @@
                             <form id="account_member_change_password_form" action="php/account_change_password.php" method="POST">
 
                                 <label for="account_member_change_password_current_password">Current Password: </label>
-                                <input type="password" id="account_member_change_password_current_password">
+                                <input type="password" id="account_member_change_password_current_password" name="account_member_change_password_current_password">
                                 <span class="hint" id="hint_account_member_change_password_current_password_empty"> ~ Please enter current password</span>
                                 <span class="hint" id="hint_account_member_change_password_current_password_unmatch"> ~ Password doesn't match, Please enter again</span>
 
                                 <label for="account_member_change_password_new_password">New Password: </label>
-                                <input type="password" id="account_member_change_password_new_password">
+                                <input type="password" id="account_member_change_password_new_password" name="account_member_change_password_new_password">
                                 <span class="hint" id="hint_account_member_change_password_new_password_empty"> ~ Please enter new passsord</span>
                                 <span class="hint" id="hint_account_member_change_password_new_password_short"> ~ Password too short, Please include at least 5 characters</span>
                                 <span class="hint" id="hint_account_member_change_password_new_password_noAZ"> ~ Please include at least 5 letters from A-Z</span>
                                 <span class="hint" id="hint_account_member_change_password_new_password_noNumber"> ~ Please include at least 3 numbers</span>
 
                                 <label for="account_member_change_password_new_password2">Re-enter new password: </label>
-                                <input type="password" id="account_member_change_password_new_password2">
+                                <input type="password" id="account_member_change_password_new_password2" name="account_member_change_password_new_password2">
                                 <span class="hint" id="hint_account_member_change_password_new_password2_empty"> ~ Please enter new password again</span>
                                 <span class="hint" id="hint_account_member_change_password_new_password2_unmatch"> ~ New password does not match, Please enter again</span>
 

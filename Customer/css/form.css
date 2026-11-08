@@ -128,6 +128,16 @@ Pad
         justify-content: center;
     }
 
+    .content_container2 {
+        form {
+            display: grid;
+            grid-template-columns: 180px 360px;
+            row-gap: 10px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+    }
+
     .hint {
         grid-column: 2;
         font-size: small;
