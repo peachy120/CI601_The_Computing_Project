@@ -68,6 +68,14 @@ form button {
     font-weight: bold;
 }
 
+.hint {
+    display: none;
+}
+
+.hint.display {
+    display: block;
+}
+
 /*---------------------------------------------------------------------------------------
 Mobile first
 ---------------------------------------------------------------------------------------*/
@@ -116,6 +124,7 @@ Pad
         display: grid;
         grid-template-columns: 240px 480px;
         row-gap: 10px;
+        column-gap: 20px;
         justify-content: center;
     }
 

@@ -196,13 +196,13 @@ createAccount_button.addEventListener("click", async function(e) {
         hint_memberPassword_noAZ.classList.remove("display");
         hint_memberPassword_noNumber.classList.remove("display");
         dataOK = false;
-    } else if (letterCount < 6) {
+    } else if (letterCount < 5) {
         hint_memberPassword_empty.classList.remove("display");
         hint_memberPassword_short.classList.remove("display");
         hint_memberPassword_noAZ.classList.add("display");
         hint_memberPassword_noNumber.classList.remove("display");
         dataOK = false;
-    } else if (numberCount < 4) {
+    } else if (numberCount < 3) {
         hint_memberPassword_empty.classList.remove("display");
         hint_memberPassword_short.classList.remove("display");
         hint_memberPassword_noAZ.classList.remove("display");

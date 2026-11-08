@@ -66,45 +66,147 @@
 
             <main>
 
-                <div class="content_container">
+                <div class="content_container2">
 
-                    <h3>My Details</h3>
-                    
-                    <div id="account_details">
+                    <div class="left_column">
 
-                        <p>Member ID: </p>
-                        <span id="account_member_id"></span>
+                    </div><!--class="left_column"-->
 
-                        <p>Firstname: </p>
-                        <span id="account_member_firstname"></span>
+                    <div class="content">
 
-                        <p>Lastname: </p>
-                        <span id="account_member_lastname"></span>
+                        <div id="account_details_area" class="display">
+                        
+                            <h3>My Details</h3>
+                            
+                            <div id="account_details">
 
-                        <p>Date of Birth: </p>
-                        <span id="account_member_dateOfBirth"></span>
+                                <p>Member ID: </p>
+                                <span id="account_member_id"></span>
 
-                        <p>Email: </p>
-                        <span id="account_member_email"></span>
+                                <p>Firstname: </p>
+                                <span id="account_member_firstname"></span>
 
-                        <p>Telephone Number: </p>
-                        <span id="account_member_tel"></span>
+                                <p>Lastname: </p>
+                                <span id="account_member_lastname"></span>
 
-                        <p>Tier: </p>
-                        <span id="account_member_tier"></span>
+                                <p>Date of Birth: </p>
+                                <span id="account_member_dateOfBirth"></span>
 
-                        <p>Date of becoming a member: </p>
-                        <span id="account_member_joined_date"></span>
+                                <p>Email: </p>
+                                <span id="account_member_email"></span>
 
-                        <p>Username: </p>
-                        <span id="account_member_username"></span>
+                                <p>Telephone Number: </p>
+                                <span id="account_member_tel"></span>
 
-                        <button id="account_member_edit">Edit My Details</button>
-                    
-                    </div><!--id="account_details"-->
-                    <script src="js/account.js"></script>
+                                <p>Tier: </p>
+                                <span id="account_member_tier"></span>
 
-                </div><!--class="content_container"-->
+                                <p>Date of becoming a member: </p>
+                                <span id="account_member_joined_date"></span>
+
+                                <p>Username: </p>
+                                <span id="account_member_username"></span>
+                            
+                            </div><!--id="account_details"-->
+                            <script src="js/account_details.js"></script>
+
+                            <button class="account_button" id="account_member_update_details_button">Update Details</button>
+                            <button class="account_button" id="account_member_change_password_button">Change Password</button>
+                            <button class="account_button" id="account_member_delete_account_button">Delete Account</button>
+
+                        </div><!-- id="account_details_area"-->                    
+
+                        <div id="update_details">
+
+                            <h3>Update My Details</h3>
+
+                            <form id="account_member_update_details_form" action="php/account_update_details.php" method="POST">
+
+                                <!-- Title -->
+                                <label for="account_member_title">Title: </label>
+                                <select id="account_member_title" name="account_member_title">
+
+                                </select>
+                                <span class="hint" id="hint_account_member_title_empty"> ~ Please select a title</span>
+
+                                <!-- Firstname -->
+                                <label for="account_member_firstname">Firstname: </label>
+                                <input type="text" id="account_member_firstname" name="account_member_firstname">
+                                <span class="hint" id="hint_account_member_firstname_empty"> ~ Please enter your firstname</span>
+
+                                <!-- Lastname -->
+                                <label for="account_member_lastname">Lastname: </label>
+                                <input type="text" id="account_member_lastname" name="account_member_lastname">
+                                <span class="hint" id="hint_account_member_lastname_empty"> ~ Please enter your lastname</span>
+
+                                <!-- Date of Birth -->
+                                <label for="account_member_dateOfBirth">Date of Birth: </label>
+                                <input type="date" id="account_member_dateOfBirth" name="account_member_dateOfBirth">
+                                <span class="hint" id="hint_account_member_dateOfBirth_empty"> ~ Please select yout date of birth</span>
+                                <span class="hint" id="hint_account_member_dateOfBirth_invalid"> ~ Please select a valid date</span>
+                                <span class="hint" id="hint_account_member_dateOfBirth_young"> ~ Sorry, you are too young to own an account</span>
+
+                                <!-- Email -->
+                                <label for="account_member_email">Email: </label>
+                                <input type="email" id="account_member_email" name="account_member_email">
+                                <span class="hint" id="hint_account_member_email_empty"> ~ Please enter your email</span>
+                                <span class="hint" id="hint_account_member_email_invalid"> ~ Please enter a valid email</span>
+                                <span class="hint" id="hint_account_member_email_short"> ~ Email is too short, Please enter again</span>
+
+                                <!-- Tel -->
+                                <label for="account_member_tel">Telephone Number: </label>
+                                <input type="tel" id="account_member_tel" name="account_member_tel">
+                                <span class="hint" id="hint_account_member_tel_empty"> ~ Please enter your phone number</span>
+                                <span class="hint" id="hint_account_member_tel_short"> - Phone Number too short, Please enter gaian</span>
+
+                                <!-- Username -->
+                                <label for="account_member_username">Username: </label>
+                                <input type="text" id="account_member_username" name="account_member_username">
+                                <span class="hint" id="hint_account_member_username_empty"> ~ Please enter username</span>
+                                <span class="hint" id="hint_account_member_username_short"> ~ Username too short, Please include at least 5 characters</span>
+                                <span class="hint" id="hint_account_member_username_existed"> ~ Sorry, this username already exists, Please enter another username</span>
+
+                                <button type="submit" id="account_member_update_details_form_button">Update My Details</button>
+
+                            </form><!-- id="account_edit_member_form"-->
+
+                        </div><!-- id="update_details"-->
+
+                        <div id="change_password">
+
+                            <h3>Change My Password</h3>
+
+                            <form id="account_member_change_password_form" action="php/account_change_password.php" method="POST">
+
+                                <label for="account_member_change_password_current_password">Current Password: </label>
+                                <input type="password" id="account_member_change_password_current_password">
+                                <span class="hint" id="hint_account_member_change_password_current_password_empty"> ~ Please enter current password</span>
+                                <span class="hint" id="hint_account_member_change_password_current_password_unmatch"> ~ Password doesn't match, Please enter again</span>
+
+                                <label for="account_member_change_password_new_password">New Password: </label>
+                                <input type="password" id="account_member_change_password_new_password">
+                                <span class="hint" id="hint_account_member_change_password_new_password_empty"> ~ Please enter new passsord</span>
+                                <span class="hint" id="hint_account_member_change_password_new_password_short"> ~ Password too short, Please include at least 5 characters</span>
+                                <span class="hint" id="hint_account_member_change_password_new_password_noAZ"> ~ Please include at least 5 letters from A-Z</span>
+                                <span class="hint" id="hint_account_member_change_password_new_password_noNumber"> ~ Please include at least 3 numbers</span>
+
+                                <label for="account_member_change_password_new_password2">Re-enter new password: </label>
+                                <input type="password" id="account_member_change_password_new_password2">
+                                <span class="hint" id="hint_account_member_change_password_new_password2_empty"> ~ Please enter new password again</span>
+                                <span class="hint" id="hint_account_member_change_password_new_password2_unmatch"> ~ New password does not match, Please enter again</span>
+
+                                <button type="submit" id="account_member_change_password_form_button">Change Password</button>
+
+                            </form><!-- id="account_member_change_password_form"-->
+
+                        </div><!-- id="change_password"-->
+
+                        <script src="js/account.js"></script>
+
+                    </div><!--class="content"-->
+
+                </div><!--class="content_container2"-->
+
             </main>
 
             <h6><a href="#top">Back to Top</a></h6>

@@ -54,7 +54,7 @@ small {
     /*---------- background ----------*/
     .background {
         background-color: #141414;
-        color: #F9F8F5;
+        color: #E4D1F2;
     }
 
     /*---------- banner ----------*/
@@ -465,14 +465,6 @@ main {
 
 .content p{
     margin: 5px;
-}
-
-.hint {
-    display: none;
-}
-
-.hint.display {
-    display: block;
 }
 
 
@@ -976,11 +968,15 @@ Pad
         padding-right: 0.5em;
     }
 
-    .menu_option.hide_in_mobile.account.display_loggedIn {
+    .menu_option.hide_in_mobile.account.display_block {
         display: none;
     }
 
-    .menu_option.hide_in_mobile.account.display_loggedIn.display {
+    .menu_option.hide_in_mobile.account.display_loggedIn {
+        display: flex;
+    }
+
+    .menu_option.hide_in_mobile.account.display_loggedIn.display_block {
         display: flex;
     }
 

@@ -5,7 +5,7 @@
         color: #E4D1F2;
     }
 
-    #account_details button {
+    .account_button {
         background-color: #E4D1F2;
         color: #2E1341;
     }
@@ -20,7 +20,6 @@
     padding-bottom: 2em;
     padding-left: 1em;
     padding-right: 1em;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     justify-self: center;
 }
 
@@ -28,7 +27,7 @@
     font-weight: bold;
 }
 
-#account_details button {
+.account_button {
     display: block;
     background-color: #3D2F28;
     color: #F9F8F5;
@@ -37,10 +36,41 @@
     align-items: center;
     margin: 5px auto;
     padding: 0;
-    height: 30px;
-    width: 100px;
+    height: 36px;
+    width: 180px;
 }
 
+#account_details_area {
+    display: none;
+}
+
+#account_details_area.display {
+    display: block;
+}
+
+#update_details {
+    display: none;
+}
+
+#update_details.display {
+    display: block;
+}
+
+#account_member_update_details_form {
+    box-shadow: none;
+}
+
+#change_password {
+    display: none;
+}
+
+#change_password.display {
+    display: block;
+}
+
+#account_member_change_password_form {
+    box-shadow: none;
+}
 
 /*---------------------------------------------------------------------------------------
 Mobile first
@@ -60,7 +90,7 @@ Mobile first
         display: block;
     }
 
-    #account_details button{
+    .account_button{
         display: block;
 
     }
@@ -90,7 +120,7 @@ Pad
         grid-column: 2;
     }
 
-    #account_details button {
+    .account_button {
         display: block;
         grid-column: 1 / span 2;
         justify-self: center;
