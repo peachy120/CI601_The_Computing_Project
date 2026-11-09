@@ -4,11 +4,23 @@
 
 const bodyColour = document.querySelector("body");
 
+const cuteDarkVersionLogoLightMode = document.querySelector(".cute_logo.cute_dark_version_for_light_mode");
+const cuteLightVersionLogoDarkMode = document.querySelector(".cute_logo.cute_light_version_for_dark_mode");
+
+const textDarkVersionLogoLightMode = document.querySelector(".text_logo.text_dark_version_for_light_mode");
+const textLightVersionLogoDarkMode = document.querySelector(".text_logo.text_light_version_for_dark_mode");
+
 const lightModeButton = document.querySelector(".colour_button.light_mode");
 const darkModeButton = document.querySelector(".colour_button.dark_mode");
 
 if (localStorage.getItem("background_colour") === "dark_mode") {
     bodyColour.classList.add("dark_colour");
+
+    cuteDarkVersionLogoLightMode.classList.remove("display_right");
+    cuteLightVersionLogoDarkMode.classList.add("display_right");
+
+    textDarkVersionLogoLightMode.classList.remove("display_left");
+    textLightVersionLogoDarkMode.classList.add("display_left");
 
     darkModeButton.classList.remove("display_left");
     lightModeButton.classList.add("display_left");
@@ -27,6 +39,12 @@ lightModeButton.addEventListener("click", function(e) {
 
     bodyColour.classList.remove("dark_colour");
 
+    cuteDarkVersionLogoLightMode.classList.add("display_right");
+    cuteLightVersionLogoDarkMode.classList.remove("display_right");
+
+    textDarkVersionLogoLightMode.classList.add("display_left");
+    textLightVersionLogoDarkMode.classList.remove("display_left");
+
     lightModeButton.classList.remove("display_left");
     darkModeButton.classList.add("display_left");
 
@@ -39,6 +57,12 @@ darkModeButton.addEventListener("click", function(e) {
     localStorage.setItem("background_colour", "dark_mode");
 
     bodyColour.classList.add("dark_colour");
+
+    cuteDarkVersionLogoLightMode.classList.remove("display_right");
+    cuteLightVersionLogoDarkMode.classList.add("display_right");
+
+    textDarkVersionLogoLightMode.classList.remove("display_left");
+    textLightVersionLogoDarkMode.classList.add("display_left");
 
     lightModeButton.classList.add("display_left");
     darkModeButton.classList.remove("display_left");

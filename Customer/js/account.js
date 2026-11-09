@@ -69,6 +69,8 @@ accountDetails_changePassword_button.addEventListener("click", function(e) {
 accountDetails_deleteAccount_button.addEventListener("click", function(e) {
 
     e.preventDefault();
+
+    
     
 })
 

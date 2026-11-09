@@ -53,7 +53,7 @@ small {
 
     /*---------- background ----------*/
     .background {
-        background-color: #141414;
+        background-color: #2D100D;
         color: #E4D1F2;
     }
 
@@ -255,8 +255,8 @@ small {
 
 /*---------- banner ----------*/
 .banner {
-    background-color: #D5CFE1;
-    color: #8C74A5;
+    background-color: #A996C0;
+    color: #F9F8F5;
     text-align: center;
     align-items: center;
     border-radius: 8px;
@@ -264,8 +264,39 @@ small {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);    
 }
 
+.cute_logo {
+    width: 250px;
+    margin: auto;
+}
+
+.cute_dark_version_for_light_mode {
+    display: none;
+}
+
+.cute_light_version_for_dark_mode {
+    display: none;
+}
+
+.display_right {
+    display: block;
+    margin-right: auto;
+}
+
 .banner h1 {
     margin: 12px;
+}
+
+.text_logo {
+    width: 200px;
+    margin: auto;
+}
+
+.text_dark_version_for_light_mode {
+    display: none;
+}
+
+.text_light_version_for_dark_mode {
+    display: none;
 }
 
 .banner h2 {
@@ -274,14 +305,19 @@ small {
 
 /*---------- Switching Light and Dark mode ----------*/
 .colour_button {
-    width: 160px;
+    width: 80px;
+    margin: auto;
+}
+
+.colour_button_img {
+    width: 40px;
 }
 
 /*---------- light_mode ----------*/
 .light_mode {
     display: none;
-    background-color: #8C74A5;
-    color: #F9F8F5;
+    background-color: #D0C6DD;
+    color: #8C74A5;
     border-radius: 5em;
     border: 0;
     font-size: 0.875em;
@@ -306,6 +342,7 @@ small {
     display: block;
     margin-left: auto;
 }
+
 
 /*---------- Show menu and sub_menu at the top if scroll down ----------*/
 .showAtTop {
@@ -380,8 +417,8 @@ small {
 
 /*---------- sub_menu ----------*/
 .sub_menu {
-    background-color: #8C74A5;
-    color: #F9F8F5;
+    background-color: #D0C6DD;
+    color: #8C74A5;
     text-align: center;
     text-transform: uppercase;
     align-items: center;
@@ -644,6 +681,26 @@ footer p a:active {
 /*--------------------------------------------
 Grid Layout
 --------------------------------------------*/
+.cute_logo {
+    grid-area: cute_logo;
+}
+
+.text_logo {
+    grid-area: text_logo;
+}
+
+.banner h1 {
+    grid-area: h1;
+}
+
+.banner h2 {
+    grid-area: h2;
+}
+
+.banner .colour_button {
+    grid-area: colour_button;
+}
+
 /*---------- left_column for content_container2 ----------*/
 .left_column {
     grid-area: left_column;
@@ -679,6 +736,33 @@ Mobile first
 ---------------------------------------------------------------------------------------*/
 
 @media (max-width: 880px) {
+
+    .banner {
+        display: grid;
+        grid-template-areas: 
+            "cute_logo cute_logo"
+            "h1 h1"
+            "h2 colour_button";
+    }
+
+    .cute_logo {
+        width: 175px;
+    }
+
+    .banner h1 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .banner h2 {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 22px;
+    }
+
+    .text_logo {
+        display: none;
+    }
     
     .dark_colour {
         .menu li{
@@ -940,6 +1024,13 @@ Pad
         .sub_menu a:last-child {
             border-right: none;
         }
+    }
+
+    .banner {
+        display: grid;
+        grid-template-areas: 
+            "cute_logo h1 text_logo"
+            "cute_logo h2 colour_button";
     }
 
     /*---------- menu ----------*/
