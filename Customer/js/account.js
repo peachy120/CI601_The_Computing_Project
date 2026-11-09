@@ -78,6 +78,175 @@ accountDetails_deleteAccount_button.addEventListener("click", function(e) {
 
 const updateDetailsForm = document.querySelector("#account_member_update_details_form");
 
+const title = updateDetailsForm.querySelector("#account_member_update_details_title");
+const firstname = updateDetailsForm.querySelector("#account_member_update_details_firstname");
+const lastname = updateDetailsForm.querySelector("#account_member_update_details_lastname");
+const dob = updateDetailsForm.querySelector("#account_member_update_details_dateOfBirth");
+const email = updateDetailsForm.querySelector("#account_member_update_details_email");
+const tel = updateDetailsForm.querySelector("#account_member_update_details_tel");
+const username = updateDetailsForm.querySelector("#account_member_update_details_username");
+
+const hint_title_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_title_empty");
+const hint_firstname_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_firstname_empty");
+const hint_lastname_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_lastname_empty");
+const hint_dob_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_dateOfBirth_empty");
+const hint_dob_invalid = updateDetailsForm.querySelector("#hint_account_member_update_details_dateOfBirth_invalid");
+const hint_dob_young = updateDetailsForm.querySelector("#hint_account_member_update_details_dateOfBirth_young");
+const hint_email_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_email_empty");
+const hint_email_invalid = updateDetailsForm.querySelector("#hint_account_member_update_details_email_invalid");
+const hint_email_short = updateDetailsForm.querySelector("#hint_account_member_update_details_email_short");
+const hint_tel_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_tel_empty");
+const hint_tel_short = updateDetailsForm.querySelector("#hint_account_member_update_details_tel_short");
+const hint_username_empty = updateDetailsForm.querySelector("#hint_account_member_update_details_username_empty");
+const hint_username_short = updateDetailsForm.querySelector("#hint_account_member_update_details_username_short");
+const hint_username_existed = updateDetailsForm.querySelector("#hint_account_member_update_details_username_existed");
+const hint_username_same = updateDetailsForm.querySelector("#hint_account_member_update_details_username_same");
+
+const updateDetailsFormButton = updateDetailsForm.querySelector("#account_member_update_details_form_button");
+
+updateDetailsFormButton.addEventListener("click", async function(e) {
+
+    e.preventDefault();
+
+    titleSelected = title.value.trim();
+    firstnameEntered = firstname.value.trim()
+    lastnameEntered = lastname.value.trim();
+    dobSelected = dob.value.trim();
+    emailEntered = email.value.trim();
+    telEntered = tel.value.trim();
+    usernameEnterd = username.value.trim();
+
+    let dataOK = true;
+
+    if (titleSelected === "") {
+        hint_title_empty.classList.add("display");
+        dataOK = false;
+    } else {
+        hint_title_empty.classList.remove("display");
+    }
+
+    if (firstnameEntered.length === 0) {
+        hint_firstname_empty.classList.add("display");
+        dataOK = false;
+    } else {
+        hint_firstname_empty.classList.remove("display");
+    }
+
+    if (lastnameEntered.length === 0) {
+        hint_lastname_empty.classList.add("display");
+        dataOK = false;
+    } else {
+        hint_lastname_empty.classList.remove("display");
+    }
+
+    const dobStr = new Date(dobSelected);
+
+    const todayDate = new Date();
+
+    const atLeast16Date = new Date();
+    atLeast16Date.setFullYear(todayDate.getFullYear() - 16);
+
+    if (dobSelected === "" ) {
+        hint_dob_empty.classList.add("display");
+        hint_dob_invalid.classList.remove("display");
+        hint_dob_young.classList.remove("display");
+        dataOK = false;
+    } else if (dobStr > todayDate) {
+        hint_dob_empty.classList.remove("display");
+        hint_dob_invalid.classList.add("display");
+        hint_dob_young.classList.remove("display");
+        dataOK = false;
+    } else if (dobSelected > atLeast16Date) {
+        hint_dob_empty.classList.remove("display");
+        hint_dob_invalid.classList.add("display");
+        hint_dob_young.classList.remove("display");
+        dataOK = false;
+    } else {
+        hint_dob_empty.classList.remove("display");
+        hint_dob_invalid.classList.remove("display");
+        hint_dob_young.classList.remove("display");
+    }
+
+    if (emailEntered.length === 0) {
+        hint_email_empty.classList.add("display");
+        hint_email_invalid.classList.remove("display");
+        hint_email_short.classList.remove("display");
+        dataOK = false;
+    } else if (emailEntered.indexOf("@") < 1) {
+        hint_email_empty.classList.remove("display");
+        hint_email_invalid.classList.add("display");
+        hint_email_short.classList.remove("display");
+        dataOK = false;
+    } else if (emailEntered.length !== 0 && emailEntered.length < 11) {
+        hint_email_empty.classList.remove("display");
+        hint_email_invalid.classList.add("display");
+        hint_email_short.classList.remove("display");
+        dataOK = false;
+    } else {
+        hint_email_empty.classList.remove("display");
+        hint_email_invalid.classList.remove("display");
+        hint_email_short.classList.remove("display");
+    }
+
+    if (telEntered.length === 0) {
+        hint_tel_empty.classList.add("display");
+        hint_tel_short.classList.remove("display");
+        dataOK = false;
+    } else if (telEntered.length < 8) {
+        hint_tel_empty.classList.remove("display");
+        hint_tel_short.classList.add("display");
+        dataOK = false;
+    } else {
+        hint_tel_empty.classList.remove("display");
+        hint_tel_short.classList.remove("display");
+    }
+
+    if (usernameEnterd.length === 0) {
+        hint_username_empty.classList.add("display");
+        hint_username_short.classList.remove("display");
+        hint_username_existed.classList.remove("display");
+        dataOK = false;
+    } else if (usernameEnterd.length !== 0 && usernameEnterd.length < 5) {
+        hint_username_empty.classList.remove("display");
+        hint_username_short.classList.add("display");
+        hint_username_existed.classList.remove("display");
+        dataOK = false;
+    } else {
+        hint_username_empty.classList.remove("display");
+        hint_username_short.classList.remove("display");
+        hint_username_existed.classList.remove("display");
+    }
+
+    try {
+        const updateDetailsFormData = new FormData(updateDetailsForm);
+
+        const response = await fetch("../Customer/php/account_update_details.php", {
+            method: "POST",
+            body: updateDetailsFormData,
+            credentials: "include"
+        })
+
+        const data = await response.json();
+
+        if (data.username_exists && usernameEnterd.length !== 0) {
+            hint_memberUsername_empty.classList.remove("display");
+            hint_memberUsername_short.classList.remove("display");
+            hint_memberUsername_existed.classList.add("display");
+            dataOK = false;
+        } else {
+            hint_memberUsername_empty.classList.remove("display");
+            hint_memberUsername_short.classList.remove("display");
+            hint_memberUsername_existed.classList.remove("display");
+        }
+    } catch (error) {
+        console.error(error);
+    }
+
+    if (dataOK) {
+
+    }
+        
+})
 
 
 
