@@ -131,6 +131,16 @@ Pad
         justify-content: center;
     }
 
+    .content_container2 {
+        #account_details {
+            display: grid;
+            grid-template-columns: 200px 350px;
+            row-gap: 10px;
+            column-gap: 20px;
+            justify-content: center;
+        }
+    }
+
     #account_details p {
         display: inline;
         grid-column: 1;

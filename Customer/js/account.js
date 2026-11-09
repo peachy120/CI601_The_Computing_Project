@@ -2,17 +2,47 @@
 // Button in left_column
 //---------------------------------------------------------------------------------------
 
+const accountDetailsArea = document.querySelector("#account_details_area");
+const updateDetailsArea = document.querySelector("#update_details");
+const changePasswordArea = document.querySelector("#change_password");
+
 const leftColumn_accountDetails_button = document.querySelector("#left_column_account_details_button");
 const leftColumn_updateDetails_button = document.querySelector("#left_column_update_details_button");
 const leftColumn_changePassword_button = document.querySelector("#left_column_change_password_button");
 
+leftColumn_accountDetails_button.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    accountDetailsArea.classList.add("display");
+    updateDetailsArea.classList.remove("display");
+    changePasswordArea.classList.remove("display");
+
+})
+
+leftColumn_updateDetails_button.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    accountDetailsArea.classList.remove("display");
+    updateDetailsArea.classList.add("display");
+    changePasswordArea.classList.remove("display");
+
+})
+
+leftColumn_changePassword_button.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    accountDetailsArea.classList.remove("display");
+    updateDetailsArea.classList.remove("display");
+    changePasswordArea.classList.add("display");
+
+})
+
 //---------------------------------------------------------------------------------------
 // Getting Buttons and forms
 //---------------------------------------------------------------------------------------
-
-const accountDetailsArea = document.querySelector("#account_details_area");
-const updateDetailsArea = document.querySelector("#update_details");
-const changePasswordArea = document.querySelector("#change_password");
 
 const accountDetails_updateDetails_button = accountDetailsArea.querySelector("#account_member_update_details_button");
 const accountDetails_changePassword_button = accountDetailsArea.querySelector("#account_member_change_password_button");
@@ -70,6 +100,7 @@ const hint_newPassword_empty = changePasswordForm.querySelector("#hint_account_m
 const hint_newPassword_short = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_short");
 const hint_newPassword_noAZ = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_noAZ");
 const hint_newPassword_noNumber = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_noNumber");
+const hint_newPassword_same = changePasswordForm.querySelector("#hint_account_member_change_password_new_password_same");
 const hint_newPassword2_empty = changePasswordForm.querySelector("#hint_account_member_change_password_new_password2_empty");
 const hint_newPassword2_unmatch = changePasswordForm.querySelector("#hint_account_member_change_password_new_password2_unmatch");
 
@@ -94,6 +125,48 @@ changePasswordFormButton.addEventListener("click", async function(e) {
         hint_currentPassword_unmatch.classList.remove("display");
     }
 
+    const findNumbers = newPasswordEntered.match(/[0-9]/g);
+    const numberCount = findNumbers ? findNumbers : 0;
+
+    const findLetters = newPasswordEntered.match(/[A-Za-z]/g);
+    const letterCount = findLetters ? findLetters : 0;
+
+    if (newPasswordEntered.length === 0) {
+        hint_newPassword_empty.classList.add("display");
+        hint_newPassword_short.classList.remove("display");
+        hint_newPassword_noAZ.classList.remove("display");
+        hint_newPassword_noNumber.classList.remove("display");
+        hint_newPassword_same.classList.remove("display");
+        dataOK = false;
+    } else if (newPasswordEntered.length < 8) {
+        hint_newPassword_empty.classList.remove("display");
+        hint_newPassword_short.classList.add("display");
+        hint_newPassword_noAZ.classList.remove("display");
+        hint_newPassword_noNumber.classList.remove("display");
+        hint_newPassword_same.classList.remove("display");
+        dataOK = false;
+    } else if (letterCount < 5) {
+        hint_newPassword_empty.classList.remove("display");
+        hint_newPassword_short.classList.remove("display");
+        hint_newPassword_noAZ.classList.add("display");
+        hint_newPassword_noNumber.classList.remove("display");
+        hint_newPassword_same.classList.remove("display");
+        dataOK = false;
+    } else if (numberCount < 3) {
+        hint_newPassword_empty.classList.remove("display");
+        hint_newPassword_short.classList.remove("display");
+        hint_newPassword_noAZ.classList.remove("display");
+        hint_newPassword_noNumber.classList.add("display");
+        hint_newPassword_same.classList.remove("display");
+        dataOK = false;
+    } else {
+        hint_newPassword_empty.classList.remove("display");
+        hint_newPassword_short.classList.remove("display");
+        hint_newPassword_noAZ.classList.remove("display");
+        hint_newPassword_noNumber.classList.remove("display");
+        hint_newPassword_same.classList.remove("display");
+    }
+
     try {
         const changePasswordFormData = new FormData(changePasswordForm);
 
@@ -114,45 +187,23 @@ changePasswordFormButton.addEventListener("click", async function(e) {
             hint_currentPassword_unmatch.classList.remove("display");
         }
 
+        if (data.password === newPasswordEntered) {
+            hint_newPassword_empty.classList.remove("display");
+            hint_newPassword_short.classList.remove("display");
+            hint_newPassword_noAZ.classList.remove("display");
+            hint_newPassword_noNumber.classList.remove("display");
+            hint_newPassword_same.classList.add("display");
+            dataOK = false;
+        } else {
+            hint_newPassword_empty.classList.remove("display");
+            hint_newPassword_short.classList.remove("display");
+            hint_newPassword_noAZ.classList.remove("display");
+            hint_newPassword_noNumber.classList.remove("display");
+            hint_newPassword_same.classList.remove("display");
+        }
+
     } catch(error) {
         console.error(error);
-    }
-
-    const findNumbers = newPasswordEntered.match(/[0-9]/g);
-    const numberCount = findNumbers ? findNumbers : 0;
-
-    const findLetters = newPasswordEntered.match(/[A-Za-z]/g);
-    const letterCount = findLetters ? findLetters : 0;
-
-    if (newPasswordEntered.length === 0) {
-        hint_newPassword_empty.classList.add("display");
-        hint_newPassword_short.classList.remove("display");
-        hint_newPassword_noAZ.classList.remove("display");
-        hint_newPassword_noNumber.classList.remove("display");
-        dataOK = false;
-    } else if (newPasswordEntered.length < 8) {
-        hint_newPassword_empty.classList.remove("display");
-        hint_newPassword_short.classList.add("display");
-        hint_newPassword_noAZ.classList.remove("display");
-        hint_newPassword_noNumber.classList.remove("display");
-        dataOK = false;
-    } else if (letterCount < 5) {
-        hint_newPassword_empty.classList.remove("display");
-        hint_newPassword_short.classList.remove("display");
-        hint_newPassword_noAZ.classList.add("display");
-        hint_newPassword_noNumber.classList.remove("display");
-        dataOK = false;
-    } else if (numberCount < 3) {
-        hint_newPassword_empty.classList.remove("display");
-        hint_newPassword_short.classList.remove("display");
-        hint_newPassword_noAZ.classList.remove("display");
-        hint_newPassword_noNumber.classList.add("display");
-        dataOK = false;
-    } else {
-        hint_newPassword_empty.classList.remove("display");
-        hint_newPassword_short.classList.remove("display");
-        hint_newPassword_noAZ.classList.remove("display");
-        hint_newPassword_noNumber.classList.remove("display");
     }
 
     if (newPassword2Entered.length === 0) {
