@@ -264,8 +264,7 @@ small {
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);    
 }
 
-.cute_logo {
-    width: 250px;
+.banner_cute_logo {
     margin: auto;
 }
 
@@ -286,8 +285,7 @@ small {
     margin: 12px;
 }
 
-.text_logo {
-    width: 200px;
+.banner_text_logo {
     margin: auto;
 }
 
@@ -527,6 +525,14 @@ footer {
     align-items: center;
 }
 
+.footer_cute_logo {
+    
+}
+
+.footer_text_logo {
+    
+}
+
 footer p{
     
 }
@@ -624,6 +630,25 @@ footer p a:active {
     margin: 6px;
 }
 
+.socialMedia_list {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dark_version_for_light_mode {
+    display: none;
+}
+
+.light_version_for_dark_mode {
+    display: none;
+}
+
+.display_inline {
+    display: inline;
+}
+
 /*-----Unvisited Link-----*/
 .contact_us a:link {
     color: #8C74A5;
@@ -682,20 +707,20 @@ footer p a:active {
 /*--------------------------------------------
 Grid Layout
 --------------------------------------------*/
-.cute_logo {
-    grid-area: cute_logo;
+.banner_cute_logo {
+    grid-area: banner_cute_logo;
 }
 
-.text_logo {
-    grid-area: text_logo;
+.banner_text_logo {
+    grid-area: banner_text_logo;
 }
 
 .banner h1 {
-    grid-area: h1;
+    grid-area: bannerH1;
 }
 
 .banner h2 {
-    grid-area: h2;
+    grid-area: bannerH2;
 }
 
 .banner .colour_button {
@@ -715,6 +740,22 @@ Grid Layout
 /*---------- brand_info for footer_content ----------*/
 .brand_info {
     grid-area: brand_info;
+}
+
+.footer_cute_logo {
+    grid-area: footer_cute_logo;
+}
+
+footer h2 {
+    grid-area: footerH2;
+}
+
+footer h3 {
+    grid-area: footerH3;
+}
+
+.footer_text_logo {
+    grid-area: footer_text_logo;
 }
 
 /*---------- find_out_more for footer_content ----------*/
@@ -741,12 +782,12 @@ Mobile first
     .banner {
         display: grid;
         grid-template-areas: 
-            "cute_logo cute_logo"
-            "h1 h1"
-            "h2 colour_button";
+            "banner_cute_logo banner_cute_logo"
+            "bannerH1 bannerH1"
+            "bannerH2 colour_button";
     }
 
-    .cute_logo {
+    .banner_cute_logo {
         width: 175px;
     }
 
@@ -761,7 +802,7 @@ Mobile first
         font-size: 22px;
     }
 
-    .text_logo {
+    .banner_text_logo {
         display: none;
     }
     
@@ -976,6 +1017,22 @@ Mobile first
         box-sizing: border-box;
     }
 
+    .brand_info {
+        display: grid;
+        grid-template-areas:
+            "footer_cute_logo"
+            "footerH2"
+            "footerH3";
+    }
+
+    .footer_cute_logo {
+        width: 150px;
+    }
+
+    .footer_text_logo {
+        display: none;
+    }
+
     /*---------- find_out_more for footer_content ----------*/
     .find_out_more {    
         border-bottom: 3px solid #F9F8F5;
@@ -988,6 +1045,10 @@ Mobile first
         border-bottom: 3px solid #F9F8F5;
         padding: 10px;
         box-sizing: border-box;
+    }
+
+    .socialMedia {
+        width: 25px;
     }
 
     /*---------- legal for footer_content ----------*/
@@ -1030,8 +1091,16 @@ Pad
     .banner {
         display: grid;
         grid-template-areas: 
-            "cute_logo h1 text_logo colour_button"
-            "cute_logo h2 text_logo colour_button";
+            "banner_cute_logo bannerH1 banner_text_logo colour_button"
+            "banner_cute_logo bannerH2 banner_text_logo colour_button";
+    }
+
+    .banner_cute_logo {
+        width: 180px;
+    }
+
+    .banner_text_logo {
+        width: 150px;
     }
 
     .colour_button {
@@ -1191,6 +1260,22 @@ Pad
         border-bottom: 3px solid #F9F8F5;    
     }
 
+    .brand_info {
+        display: grid;
+        grid-template-areas: 
+            "footer_cute_logo footer_text_logo"
+            "footerH2 footer_text_logo"
+            "footerH3 footerH3";
+    }
+
+    .footer_cute_logo {
+        width: 250px;
+    }
+
+    .footer_text_logo {
+        height: 150px;
+    }
+
     /*---------- find_out_more for footer_content ----------*/
     .find_out_more {
         border-right: 3px solid #F9F8F5;
@@ -1199,6 +1284,10 @@ Pad
     /*---------- contact_us for footer_content ----------*/
     .contact_us {
         border-right: 3px solid #F9F8F5;
+    }
+
+    .socialMedia {
+        width: 30px;
     }
 
     /*---------- legal for footer_content ----------*/
