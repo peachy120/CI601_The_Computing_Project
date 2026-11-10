@@ -6,7 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/stylesheet1.css" rel="stylesheet" type="text/css">
-        <link href="css/booking.css" rel="stylesheet" type="text/css">
+        <link href="css/form.css" rel="stylesheet" type="text/css">
+        <link href="css/booking_table.css" rel="stylesheet" type="text/css">
         <title> ~ Booking a Table</title>
     </head>
 
@@ -78,12 +79,61 @@
                     <div class="content">
 
                         <div id="booking_table_calendar">
-                            <h3></h3>
-                        </div><!--id="booking_table_calendar"-->
 
+                            <div id="booking_table_calendar_controls">
+                                <span id="current_month"></span>
+                                <button id="next_month">Next</button>
+                            </div><!--id="booking_table_calendar_controls"-->
+
+                            <div id="booking_table_calendar"></div><!--id="booking_table_calendar"-->
+
+                            <div id="booking_table_remain_number">
+                                <p>Remaining available table with Cats: <span id="remain_table_with_cat"></span></p>
+                                <p>Remaining available table with Dogs: <span id="remain_table_with_dog"></span></p>
+                            </div><!--id="booking_table_remain_number"-->
+
+                        </div><!--id="booking_table_calendar"-->
+                        <script src="js/booking_calendar_table.js"></script>
+                        
                         <form id="booking_table_form"><!--action="php/booking_table.php" method="POST"-->
+                            
+                            <label for="booking_table_date">Date: </label>
+                            <input type="date" id="booking_table_date" name="booking_table_date">
+
+                            <label for="booking_table_startTime">Start Time: </label>
+                            <input type="time" id="booking_table_startTime" name="booking_table_startTime">
+
+                            <label for="booking_table_with">Hang out with: </label>
+                            <div id="booking_table_with" class="radio_option">
+                                <label><input type="radio" name="booking_table_with" value="CAT">Cat</label>
+                                <label><input type="radio" name="booking_table_with" value="DOG">Dog</label>
+                            </div>
+
+                            <label for="booking_table_minor_no">Number of Minor: </label>
+                            <input type="number" id="booking_table_minor_no" name="booking_table_minor_no">
+
+                            <label for="booking_table_adult_no">Number of Adult: </label>
+                            <input type="number" id="booking_table_adult_no" name="booking_table_adult_no">
+
+                            <label for="booking_table_elderly_no">Number of Elderly: </label>
+                            <input type="number" id="booking_table_elderly_no" name="booking_table_elderly_no">
+
+                            <label for="booking_table_wheelchair">Does any of the guest uses a wheelchair?</label>
+                            <select id="booking_table_wheelchair" name="booking_table_wheelchair">
+                                <option value=""></option>
+                                <option value="YES">Yes</option>
+                                <option value="NO">No</option>
+                            </select>
+
+                            <label for="booking_table_description" class="description">Description for the booking to make your visit experience better</label>
+                            <textarea id="booking_table_description" name="booking_table_description"></textarea>
+
+                            <label class="rules" class="checkbox_option"><input type="checkbox" id="booking_table_agree_rules" name="booking_table_agree_rules">I have read and understood all rules and promise to follow during the visit</label>
+
+                            <button type="submit" id="booking_table_form_button">Book Table</button>
 
                         </form><!--id="booking_table_form"-->
+                        <script src="js/booking_table.js"></script>
 
                     </div><!--class="content"-->
 

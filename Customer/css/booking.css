@@ -18,32 +18,6 @@
 
 }
 
-#booking_left_column {
-
-}
-
-#booking_left_column li{
-    list-style: none;
-    padding: 5px;
-}
-
-#booking_left_column a:link {
-    color: #8C74A5;
-    text-decoration: none;
-}
-
-#booking_left_column a:visited {
-    color: #8C74A5;
-}
-
-#booking_left_column a:hover {
-    color: #2e1341;
-}
-
-#booking_left_column a:active {
-    color: #8C74A5;
-}
-
 .content {
     display: block;
 }

@@ -487,6 +487,28 @@ main {
     margin: 5px;
 }
 
+.left_column li{
+    list-style: none;
+    padding: 5px;
+}
+
+.left_column a:link {
+    color: #8C74A5;
+    text-decoration: none;
+}
+
+.left_column a:visited {
+    color: #8C74A5;
+}
+
+.left_column a:hover {
+    color: #2e1341;
+}
+
+.left_column a:active {
+    color: #8C74A5;
+}
+
 /*---------- content for content_container & content_container2 ----------*/
 .content {
     width: 100%;
@@ -497,6 +519,7 @@ main {
     justify-self: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    box-sizing: border-box;
 }
 
 .content p{
