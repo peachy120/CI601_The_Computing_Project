@@ -12,6 +12,10 @@
 
 }
 
+.left_column {
+    align-items: center;
+}
+
 .left_column_account_button {
     background-color: #8C74A5;
     color: #F9F8F5;

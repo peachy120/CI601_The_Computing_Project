@@ -1090,6 +1090,7 @@ Pad
 
     .banner {
         display: grid;
+        grid-template-columns: 3fr 4fr 2fr 1fr;
         grid-template-areas: 
             "banner_cute_logo bannerH1 banner_text_logo colour_button"
             "banner_cute_logo bannerH2 banner_text_logo colour_button";
@@ -1106,6 +1107,8 @@ Pad
     .colour_button {
         margin: 0;
         margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     /*---------- menu ----------*/
@@ -1226,7 +1229,6 @@ Pad
     /*---------- left_column for content_container2 ----------*/
     .left_column {
         display: flex;
-        align-items: center;
         box-sizing: border-box;
         flex-direction: column;
         gap: 10px;

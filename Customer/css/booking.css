@@ -1,0 +1,104 @@
+.dark_colour {
+
+    #how_it_works {
+        border-top: 3px solid #e4d1f2;
+    }
+
+    #reasons {
+        border-top: 3px solid #e4d1f2;
+    }
+
+    #need_to_know {
+        border-top: 3px solid #e4d1f2;
+    }
+
+    #rules {
+        border-top: 3px solid #e4d1f2;
+    }
+
+}
+
+#booking_left_column {
+
+}
+
+#booking_left_column li{
+    list-style: none;
+    padding: 5px;
+}
+
+#booking_left_column a:link {
+    color: #8C74A5;
+    text-decoration: none;
+}
+
+#booking_left_column a:visited {
+    color: #8C74A5;
+}
+
+#booking_left_column a:hover {
+    color: #2e1341;
+}
+
+#booking_left_column a:active {
+    color: #8C74A5;
+}
+
+.content {
+    display: block;
+}
+
+#how_it_works {
+    display: block;
+    border-top: 3px solid #3d2f28;
+}
+
+#reasons {
+    display: block;
+    border-top: 3px solid #3d2f28;
+}
+
+#need_to_know {
+    display: block;
+    border-top: 3px solid #3d2f28;
+}
+
+#rules {
+    display: block;
+    border-top: 3px solid #3d2f28;
+}
+
+/*---------------------------------------------------------------------------------------
+Mobile first
+---------------------------------------------------------------------------------------*/
+
+@media (max-width: 880px) {
+    
+    .dark_colour {
+
+    
+    }  
+
+    .content h3 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*---------------------------------------------------------------------------------------
+Pad
+---------------------------------------------------------------------------------------*/
+
+@media (min-width: 881px) {
+    
+    .dark_colour {
+
+    
+    }  
+    
+}
+
+/*---------------------------------------------------------------------------------------
+Laptop, computer
+---------------------------------------------------------------------------------------*/
