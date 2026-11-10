@@ -476,6 +476,7 @@ main {
 .left_column {
     width: 100%;
     background-color: #D4CADC;
+    color: #120719;
     border-radius: 2px;
     padding: 0.5em;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
@@ -1029,8 +1030,13 @@ Pad
     .banner {
         display: grid;
         grid-template-areas: 
-            "cute_logo h1 text_logo"
-            "cute_logo h2 colour_button";
+            "cute_logo h1 text_logo colour_button"
+            "cute_logo h2 text_logo colour_button";
+    }
+
+    .colour_button {
+        margin: 0;
+        margin-top: auto;
     }
 
     /*---------- menu ----------*/
