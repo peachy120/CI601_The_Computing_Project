@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === "DELETE") {
 
         setCookie($memberID, '', time() - 60 * 60, '/');
 
-        header("Location: ../template1.html");
+        header("Location: ../home.html");
 
         exit;
     } else {

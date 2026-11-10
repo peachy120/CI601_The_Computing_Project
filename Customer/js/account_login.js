@@ -74,7 +74,7 @@ login_Button.addEventListener("click", async function(e) {
     }
 
     if (dataOK) {
-        window.location.href = "../Customer/template1.html";
+        window.location.href = "../Customer/home.html";
     }
 })
 
