@@ -200,6 +200,10 @@ Pad
         justify-content: center;
         align-items: center;
     }
+
+    .rule {
+        grid-column: 1 / span 2;
+    }
 }
 
 /*---------------------------------------------------------------------------------------

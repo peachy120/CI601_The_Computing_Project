@@ -99,24 +99,38 @@
                             
                             <label for="booking_table_date">Date: </label>
                             <input type="date" id="booking_table_date" name="booking_table_date">
+                            <span class="hint" id="hint_booking_table_date_empty"> ~ Please select a date</span>
+                            <span class="hint" id="hint_booking_table_date_invalid"> ~ Please select a valid date</span>
+                            <span class="hint" id="hint_booking_table_date_far"> ~ Please select a date within 2 month</span>
 
                             <label for="booking_table_startTime">Start Time: </label>
                             <input type="time" id="booking_table_startTime" name="booking_table_startTime">
+                            <span class="hint" id="hint_booking_table_startTime_empty"> ~ Please select a start time</span>
+                            <span class="hint" id="hint_booking_table_startTime_invalid"> ~ Please select a time between 1000 and 1900</span>
 
                             <label for="booking_table_with">Hang out with: </label>
                             <div id="booking_table_with" class="radio_option">
                                 <label><input type="radio" name="booking_table_with" value="CAT">Cat</label>
                                 <label><input type="radio" name="booking_table_with" value="DOG">Dog</label>
                             </div>
+                            <span class="hint" id="hint_booking_table_with_empty"> ~ Please select</span>
 
                             <label for="booking_table_minor_no">Number of Minor: </label>
                             <input type="number" id="booking_table_minor_no" name="booking_table_minor_no">
+                            <span class="hint" id="hint_booking_table_minor_no_empty"> ~ Please enter number of guest that are minor. If there will not be any, Please enter 0</span>
+                            <span class="hint" id="hint_booking_table_minor_no_invalid"> ~ Please enter a valid number</span>
 
                             <label for="booking_table_adult_no">Number of Adult: </label>
                             <input type="number" id="booking_table_adult_no" name="booking_table_adult_no">
+                            <span class="hint" id="hint_booking_table_adult_no_empty"> ~ Please enter number of guest that are adult. If there will not be any, Please enter 0</span>
+                            <span class="hint" id="hint_booking_table_adult_no_invalid"> ~ Please enter a valid number</span>
 
                             <label for="booking_table_elderly_no">Number of Elderly: </label>
                             <input type="number" id="booking_table_elderly_no" name="booking_table_elderly_no">
+                            <span class="hint" id="hint_booking_table_elderly_no_empty"> ~ Please enter number of guest that are elderly. If there will not be any, Please enter 0</span>
+                            <span class="hint" id="hint_booking_table_elderly_no_invalid"> ~ Please enter a valid number</span>
+                            
+                            <span class="hint" id="hint_booking_table_no_adult_elderly"> ~ Minor must be accompant with at least 1 adult or 1 elderly</span>
 
                             <label for="booking_table_wheelchair">Does any of the guest uses a wheelchair?</label>
                             <select id="booking_table_wheelchair" name="booking_table_wheelchair">
@@ -124,11 +138,13 @@
                                 <option value="YES">Yes</option>
                                 <option value="NO">No</option>
                             </select>
+                            <span class="hint" id="hint_booking_table_wheelchair_empty"> ~ Please select</span>
 
                             <label for="booking_table_description" class="description">Description for the booking to make your visit experience better</label>
                             <textarea id="booking_table_description" name="booking_table_description"></textarea>
 
                             <label class="rules" class="checkbox_option"><input type="checkbox" id="booking_table_agree_rules" name="booking_table_agree_rules">I have read and understood all rules and promise to follow during the visit</label>
+                            <span class="hint rule" id="hint_booking_table_agree_rules_empty"> ~ Please check the box not agree all rules</span>
 
                             <button type="submit" id="booking_table_form_button">Book Table</button>
 
