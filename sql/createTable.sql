@@ -77,6 +77,7 @@ CREATE TABLE tBooking (
     date             DATE NOT NULL,
     startTime        TIME NOT NULL,
     endTime          TIME,
+    type             ENUM("TABLE", "ROOM", "FLOOR") DEFAULT "TABLE" NOT NULL,
     with             ENUM("CAT", "DOG") DEFAULT "CAT" NOT NULL,
     guestNo_minor    INT NOT NULL,
     guestNo_adult    INT NOT NULL,

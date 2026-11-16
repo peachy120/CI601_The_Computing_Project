@@ -141,7 +141,7 @@ createAccount_button.addEventListener("click", async function(e) {
         hint_memberUsername_short.classList.remove("display");
         hint_memberUsername_existed.classList.remove("display");
         dataOK = false;
-    } else if (username.length !== 0 && username.lastname < 5) {
+    } else if (username.length !== 0 && username.length < 5) {
         hint_memberUsername_empty.classList.remove("display");
         hint_memberUsername_short.classList.add("display");
         hint_memberUsername_existed.classList.remove("display");

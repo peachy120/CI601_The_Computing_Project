@@ -25,17 +25,16 @@ nextMonthButton.addEventListener("click", function(e) {
 
 });
 
-async function getRemainTableWithCat(year, month) {
+async function fetchRemainTableWithCat(year, month) {
     
-    try {
+    const yearMonth = `${year}-${String(month+1).padStart(2,'0')}`;
 
-        const response = await fetch("../Customer/php/booking_calendar_month.php", {
+    return await fetch(`booking_calendar_month.php?yearMonth=${yearMonth}`)
+        .then(response => response.json())
+        .then(tableBooking => {
 
         })
 
-    } catch(error) {
-        console.error(error);
-    }
 }
 
 
@@ -47,7 +46,7 @@ function monthName(month) {
     return ["January","February","March","April","May","June", "July","August","September","October","November","December"][month];
 }
 
-async function getRemainTableWithCat(selectedDate) {
+async function fetchRemainTableWithCat(selectedDate) {
 
     try {
         const response = await fetch("../Customer/php/booking_calendar_table.php", {
