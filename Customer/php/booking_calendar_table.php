@@ -6,15 +6,35 @@ header ('Content-Type: application/json');
 
 $date = $_GET['date'];
 
-$numberOfTableBooked = $database->prepare("SELECT COUNT(*) FROM tBooking WHERE type = 'TABLE' AND date = ?");
-$numberOfTableBooked->bind_param('s', $date);
-$numberOfTableBooked->execute();
+$maxCapacityForCat = 52;
+$maxCapacityForDog = 41;
 
-$numberOfTableBookedResult = $numberOfTableBooked->get_result();
-$numberOfTableBookedList = $numberOfTableBookedResult->fetch_assoc();
+$remaingAvabilityWithCat = $maxCapacityForCat;
+$remaingAvabilityWithDog = $maxCapacityForDog;
 
-$numberOfTableRemaining = 114 - $numberOfTableBookedResult;
+$bookingWithCat = $database->prepare("SELECT COUNT(*) FROM tBooking WHERE with = 'CAT' AND type = 'TABLE' AND date = ?");
+$bookingWithCat->bind_param('s', $date);
+$bookingWithCat->execute();
 
-echo json_encode($numberOfTableRemaining);
+$bookingWithCat->bind_result($bookedWithCat);
+$bookingWithCat->fetch();
+$bookingWithCat->close();
+
+$remaingAvabilityWithCat = $maxCapacityForCat - $bookedWithCat;
+
+
+$bookingWithDog = $database->prepare("SELECT COUNT(*) FROM tBooking WHERE with = 'DOG' AND type = 'TABLE' AND date = ?");
+$bookingWithDog->bind_param('s', $date);
+$bookingWithDog->execute();
+
+$bookingWithDog->bind_result($bookedWithDog);
+$bookingWithDog->fetch();
+$bookingWithDog->close();
+
+$remaingAvabilityWithDog = $maxCapacityForDog - $bookedWithDog;
+
+
+echo json_encode(["remainingAvabilityWithCat" => $remaingAvabilityWithCat,
+                    "remainingAvabilityWithDog" => $remaingAvabilityWithDog]);
 
 ?>

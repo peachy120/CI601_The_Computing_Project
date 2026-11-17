@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/stylesheet1.css" rel="stylesheet" type="text/css">
         <link href="css/form.css" rel="stylesheet" type="text/css">
+        <link href="css/calendar.css" rel="stylesheet" type="text/css">
         <link href="css/booking_table.css" rel="stylesheet" type="text/css">
         <title> ~ Booking a Table</title>
     </head>
@@ -78,21 +79,22 @@
 
                     <div class="content">
 
-                        <div id="booking_table_calendar">
+                        <div class="booking_calendar">
 
-                            <div id="booking_table_calendar_controls">
-                                <span id="current_month"></span>
-                                <button id="next_month">Next</button>
-                            </div><!--id="booking_table_calendar_controls"-->
+                            <div class="booking_calendar_controls">
+                                <button class="calendar_controls" id="last_month">Last</button>
+                                <span class="current_month"></span>
+                                <button class="calendar_controls" id="next_month">Next</button>
+                            </div><!--class="booking_calendar_controls"-->
 
                             <div id="booking_table_calendar"></div><!--id="booking_table_calendar"-->
 
-                            <div id="booking_table_remain_number">
-                                <p>Remaining available table with Cats: <span id="remain_table_with_cat"></span></p>
-                                <p>Remaining available table with Dogs: <span id="remain_table_with_dog"></span></p>
-                            </div><!--id="booking_table_remain_number"-->
+                        </div><!--class="booking_calendar"-->
 
-                        </div><!--id="booking_table_calendar"-->
+                        <div class="booking_remain_number">
+                            <p>Remaining available table with Cats: <span id="remain_table_with_cat"></span></p>
+                            <p>Remaining available table with Dogs: <span id="remain_table_with_dog"></span></p>
+                        </div><!--id="booking_remain_number"-->
                         <script src="js/booking_calendar_table.js"></script>
                         
                         <form id="booking_table_form"><!--action="php/booking_table.php" method="POST"-->

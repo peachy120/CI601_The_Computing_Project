@@ -53,7 +53,7 @@ small {
 
     /*---------- background ----------*/
     .background {
-        background-color: #2D100D;
+        background-color: black;
         color: #E4D1F2;
     }
 
@@ -142,6 +142,28 @@ small {
     .left_column {
         background-color: #3C1855;
         color: #E4D1F2;
+    }
+
+    /*----- Unvisited Link -----*/
+    .left_column a:link {
+        color: #E4D1F2;;
+        text-decoration: none;
+    }
+
+    /*----- Visited Link -----*/
+    .left_column a:visited {
+        color: #E4D1F2;;
+    }
+
+    /*----- When mouse overs it -----*/
+    .left_column a:hover {
+        color: #F9F8F5;
+        /*Make font bigger*/
+    }
+
+    /*----- The moment being click -----*/
+    .left_column a:active {
+        color: #E4D1F2;;
     }
 
     /*---------- content ----------*/

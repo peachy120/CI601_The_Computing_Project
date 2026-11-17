@@ -1,0 +1,167 @@
+.dark_colour {
+
+    .booking_calendar {
+        background-color: #120719;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .booking_calendar_controls {    
+        font-size: 14px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .current_month {
+        color: #E4D1F2;
+        font-weight: bolder;
+    }
+
+    .calendar_controls {
+        background-color: #E4D1F2;
+        color: #2E1341;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    #booking_table_calendar {
+        padding: 0;
+    }
+
+    .tableCalendarTable {
+        background-color: #2E1341;
+        margin: auto;
+    }
+
+    .tableCalendarTable button {
+        border: none;
+    }
+
+    .tableCalendarTable tr {
+        color: #E4D1F2;
+        font-size: 12px;
+    }
+
+}
+
+.booking_calendar {
+    background-color: #D0C6DD;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.booking_calendar_controls {    
+    font-size: 14px;
+    margin: auto;
+    text-align: center;
+}
+
+.calendar_controls {
+    background-color: #A996C0;
+    color: #F9F8F5;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.current_month {
+    color: #8C74A5;
+}
+
+#booking_table_calendar {
+    padding: 0;
+}
+
+.tableCalendarTable {
+    background-color: #D0C6DD;
+    margin: auto;
+}
+
+.tableCalendarTable button {
+    border: none;
+}
+
+.tableCalendarTable tr {
+    color: #8C74A5;
+    font-size: 12px;
+}
+
+/*---------------------------------------------------------------------------------------
+Mobile first
+---------------------------------------------------------------------------------------*/
+
+@media (max-width: 40em) {
+    
+    .dark_colour {
+
+    
+    }  
+
+    .booking_calendar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 10px;    
+    }
+
+    .calendar_controls {
+        width: 40px;
+        height: 25px;
+    }
+
+    #booking_table_calendar {
+        margin: 0;
+    }
+    
+    .tableCalendarTable button {        
+        width: 30px;
+        height: 20px;
+    }
+}
+
+/*---------------------------------------------------------------------------------------
+Pad
+---------------------------------------------------------------------------------------*/
+
+@media (min-width: 40em) {
+    
+    .dark_colour {
+
+    
+    }  
+
+    .booking_calendar {
+        padding: 20px;
+        margin: 20px;    
+    }
+
+    .booking_calendar_controls {
+        
+    }
+
+    .calendar_controls {
+        width: 70px;
+        height: 30px;
+    }
+
+    .tableCalendarTable {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .tableCalendarTable button {        
+        width: 50px;
+        height: 30px;
+    }
+    
+}
+
+/*---------------------------------------------------------------------------------------
+Laptop, computer
+---------------------------------------------------------------------------------------*/
